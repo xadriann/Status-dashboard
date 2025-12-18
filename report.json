@@ -1,0 +1,81 @@
+{
+  "generated_at": "2025-12-12T14:59:17.093373",
+  "summary": {
+    "total_alerts": 0,
+    "unresolved_alerts": 0,
+    "by_severity": {},
+    "by_rule": {},
+    "by_location": {},
+    "recent_alerts": []
+  },
+  "rule_performance": {
+    "1": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "2": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "3": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "4": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "5": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "6": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "7": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "8": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "9": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "10": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "11": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    }
+  },
+  "location_rankings": [],
+  "top_issues": []
+}

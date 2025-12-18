@@ -1,0 +1,188 @@
+[
+  {
+    "description": "RULE 1: Damaged item in regular shipment (not a return)",
+    "id": "evt-rule1-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T10:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.1"],
+    "destination_list": [
+      {
+        "type": "urn:epcglobal:cbv:sdt:location",
+        "destination": "http://nedapretail.com/loc/store-002"
+      }
+    ]
+  },
+  {
+    "description": "RULE 2: Persistent damaged status through receiving (Step 1: Mark as damaged)",
+    "id": "evt-rule2-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T09:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.2"]
+  },
+  {
+    "description": "RULE 2: Persistent damaged status (Step 2: Received still as damaged)",
+    "id": "evt-rule2-002",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T11:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:receiving",
+    "biz_location": "http://nedapretail.com/loc/store-002",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.2"]
+  },
+  {
+    "description": "RULE 3: Damaged status overwritten by non-persistent status (Step 1: Mark damaged)",
+    "id": "evt-rule3-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T08:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.3"]
+  },
+  {
+    "description": "RULE 3: Damaged status overwritten (Step 2: Changed to sellable without repair)",
+    "id": "evt-rule3-002",
+    "type": "object_event",
+    "action": "OBSERVE",
+    "event_time": "2025-12-18T12:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:sellable_accessible",
+    "biz_step": "urn:epcglobal:cbv:bizstep:stocking",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.3"]
+  },
+  {
+    "description": "RULE 5: High volume of damaged assignments (Multiple EPCs in one event)",
+    "id": "evt-rule5-001",
+    "type": "aggregation_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T13:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "child_epcs": [
+      "urn:epc:id:sgtin:1234567.000001.10",
+      "urn:epc:id:sgtin:1234567.000001.11",
+      "urn:epc:id:sgtin:1234567.000001.12",
+      "urn:epc:id:sgtin:1234567.000001.13",
+      "urn:epc:id:sgtin:1234567.000001.14"
+    ]
+  },
+  {
+    "description": "RULE 6: Damaged item sold at POS",
+    "id": "evt-rule6-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T14:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:retail_selling",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.6"],
+    "biz_transaction_list": [
+      {
+        "type": "urn:epcglobal:cbv:btt:inv",
+        "value": "TICKET-999"
+      }
+    ]
+  },
+  {
+    "description": "RULE 7: Immediate damaged after programming (Step 1: Commissioning)",
+    "id": "evt-rule7-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T15:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:active",
+    "biz_step": "urn:epcglobal:cbv:bizstep:commissioning",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.7"]
+  },
+  {
+    "description": "RULE 7: Immediate damaged (Step 2: Damaged 2 minutes later)",
+    "id": "evt-rule7-002",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T15:02:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.7"]
+  },
+  {
+    "description": "RULE 8: Damaged item in wrong sublocation (Sales Floor)",
+    "id": "evt-rule8-001",
+    "type": "object_event",
+    "action": "OBSERVE",
+    "event_time": "2025-12-18T16:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting",
+    "biz_location": "http://nedapretail.com/loc/store-001/Sales%20Floor",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.8"]
+  },
+  {
+    "description": "RULE 9: Sold item returned as damaged (Step 1: Sold)",
+    "id": "evt-rule9-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-10T10:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:retail_sold",
+    "biz_step": "urn:epcglobal:cbv:bizstep:retail_selling",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.9"]
+  },
+  {
+    "description": "RULE 9: Sold item returned as damaged (Step 2: Marked damaged days later)",
+    "id": "evt-rule9-002",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T17:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.9"]
+  },
+  {
+    "description": "RULE 11: Double Stock Deduction (Step 1: Mark Damaged)",
+    "id": "evt-rule11-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T18:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.11"]
+  },
+  {
+    "description": "RULE 11: Double Stock Deduction (Step 2: Sold while damaged)",
+    "id": "evt-rule11-002",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2025-12-18T19:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:retail_sold",
+    "biz_step": "urn:epcglobal:cbv:bizstep:retail_selling",
+    "biz_location": "http://nedapretail.com/loc/store-001",
+    "epc_list": ["urn:epc:id:sgtin:1234567.000001.11"]
+  }
+]

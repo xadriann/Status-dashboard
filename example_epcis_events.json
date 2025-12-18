@@ -1,0 +1,194 @@
+[
+  {
+    "id": "evt-001",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T10:30:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "urn:epc:id:sgln:0012345.11111.0",
+    "read_point": "urn:epc:id:sgln:0012345.11111.400",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456789"
+    ],
+    "biz_transaction_list": []
+  },
+  {
+    "id": "evt-002",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T11:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "biz_location": "urn:epc:id:sgln:0012345.11111.0",
+    "read_point": "urn:epc:id:sgln:0012345.11111.400",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456789"
+    ],
+    "biz_transaction_list": [
+      {
+        "type": "urn:epcglobal:cbv:btt:po",
+        "value": "SHIP-123"
+      }
+    ],
+    "destination_list": [
+      {
+        "type": "urn:epcglobal:cbv:sdt:owning_party",
+        "value": "urn:epc:id:sgln:0012345.22222.0"
+      }
+    ]
+  },
+  {
+    "id": "evt-003",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T12:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:retail_sold",
+    "biz_step": "urn:epcglobal:cbv:bizstep:retail_selling",
+    "biz_location": "urn:epc:id:sgln:0012345.33333.0",
+    "read_point": "urn:epc:id:sgln:0012345.33333.500",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456790"
+    ],
+    "biz_transaction_list": [
+      {
+        "type": "urn:epcglobal:cbv:btt:inv",
+        "value": "TXN-456"
+      }
+    ]
+  },
+  {
+    "id": "evt-004",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T13:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:sellable_accessible",
+    "biz_step": "urn:epcglobal:cbv:bizstep:stocking",
+    "biz_location": "urn:epc:id:sgln:0012345.44444.0",
+    "read_point": "urn:epc:id:sgln:0012345.44444.600",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456791"
+    ],
+    "biz_transaction_list": []
+  },
+  {
+    "id": "evt-005",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T14:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:active",
+    "biz_step": "urn:epcglobal:cbv:bizstep:commissioning",
+    "biz_location": "urn:epc:id:sgln:0012345.11111.0",
+    "read_point": "urn:epc:id:sgln:0012345.11111.400",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456792"
+    ],
+    "biz_transaction_list": []
+  },
+  {
+    "id": "evt-006",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T14:01:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "urn:epc:id:sgln:0012345.11111.0",
+    "read_point": "urn:epc:id:sgln:0012345.11111.400",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456792"
+    ],
+    "biz_transaction_list": []
+  },
+  {
+    "id": "evt-007",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T15:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:stocking",
+    "biz_location": "urn:epc:id:sgln:0012345.55555.0",
+    "read_point": "urn:epc:id:sgln:0012345.55555.700",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456793"
+    ],
+    "biz_transaction_list": []
+  },
+  {
+    "id": "evt-008",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T16:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:retail_sold",
+    "biz_step": "urn:epcglobal:cbv:bizstep:retail_selling",
+    "biz_location": "urn:epc:id:sgln:0012345.66666.0",
+    "read_point": "urn:epc:id:sgln:0012345.66666.800",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456794"
+    ],
+    "biz_transaction_list": [
+      {
+        "type": "urn:epcglobal:cbv:btt:inv",
+        "value": "TXN-789"
+      }
+    ]
+  },
+  {
+    "id": "evt-009",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T17:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "urn:epc:id:sgln:0012345.66666.0",
+    "read_point": "urn:epc:id:sgln:0012345.66666.800",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456794"
+    ],
+    "biz_transaction_list": []
+  },
+  {
+    "id": "evt-010",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T18:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting",
+    "biz_location": "urn:epc:id:sgln:0012345.77777.0",
+    "read_point": "urn:epc:id:sgln:0012345.77777.900",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456795"
+    ],
+    "biz_transaction_list": []
+  },
+  {
+    "id": "evt-011",
+    "type": "object_event",
+    "action": "ADD",
+    "event_time": "2024-01-15T19:00:00Z",
+    "event_time_zone_offset": "+00:00",
+    "disposition": "urn:epcglobal:cbv:disp:retail_sold",
+    "biz_step": "urn:epcglobal:cbv:bizstep:retail_selling",
+    "biz_location": "urn:epc:id:sgln:0012345.77777.0",
+    "read_point": "urn:epc:id:sgln:0012345.77777.900",
+    "epc_list": [
+      "urn:epc:id:sgtin:123456.789012.3456795"
+    ],
+    "biz_transaction_list": [
+      {
+        "type": "urn:epcglobal:cbv:btt:inv",
+        "value": "TXN-999"
+      }
+    ]
+  }
+]
+

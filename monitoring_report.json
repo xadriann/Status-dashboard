@@ -1,0 +1,110 @@
+{
+  "generated_at": "2025-12-17T08:56:09.499711",
+  "summary": {
+    "total_alerts": 1,
+    "unresolved_alerts": 1,
+    "by_severity": {
+      "Medium": 1
+    },
+    "by_rule": {
+      "8": 1
+    },
+    "by_location": {
+      "http://nedapretail.com/loc/sublocation-1046199": 1
+    },
+    "recent_alerts": [
+      {
+        "alert_id": "R8_f2cee644-29cf-4db4-90a6-ec8428466b00",
+        "rule_name": "Damaged Items in Wrong Sublocation",
+        "severity": "Medium",
+        "location": "http://nedapretail.com/loc/sublocation-1046199",
+        "timestamp": "2025-12-16T19:02:14.689000+00:00"
+      }
+    ]
+  },
+  "rule_performance": {
+    "1": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "2": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "3": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "4": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "5": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "6": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "7": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "8": {
+      "total_detections": 1,
+      "unresolved": 1,
+      "resolved": 0,
+      "resolution_rate": 0.0
+    },
+    "9": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "10": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    },
+    "11": {
+      "total_detections": 0,
+      "unresolved": 0,
+      "resolved": 0,
+      "resolution_rate": 0
+    }
+  },
+  "location_rankings": [
+    {
+      "location": "http://nedapretail.com/loc/sublocation-1046199",
+      "total_alerts": 1,
+      "critical_alerts": 0,
+      "high_alerts": 0,
+      "medium_alerts": 1,
+      "low_alerts": 0
+    }
+  ],
+  "top_issues": [
+    {
+      "rule_id": 8,
+      "rule_name": "Rule 8",
+      "count": 1
+    }
+  ]
+}

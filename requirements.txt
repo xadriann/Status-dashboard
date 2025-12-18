@@ -1,0 +1,16 @@
+# Requirements for EPC Disposition Misuse Monitoring System
+
+# Core dependencies
+requests>=2.31.0  # Required for API client
+
+# For email alerts (uncomment if needed):
+# smtplib (built-in)
+
+# For data persistence (uncomment if needed):
+# sqlalchemy>=2.0.0
+# sqlite3 (built-in)
+
+# For advanced analytics (uncomment if needed):
+# pandas>=2.0.0
+# numpy>=1.24.0
+

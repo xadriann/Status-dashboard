@@ -1,0 +1,115 @@
+{
+  "high_volume_threshold_multiplier": 2.0,
+  "high_volume_window_hours": 24,
+  "consecutive_count_threshold": 2,
+  "immediate_damaged_threshold_minutes": 5,
+  "stock_mutation_timeout_minutes": 30,
+  
+  "enable_console_alerts": true,
+  "enable_file_alerts": true,
+  "alert_file_path": "alerts.jsonl",
+  
+  "enable_email_alerts": false,
+  "email_recipients": [],
+  "email_smtp_host": "",
+  "email_smtp_port": 587,
+  "email_smtp_user": "",
+  "email_smtp_password": "",
+  
+  "enable_webhook_alerts": false,
+  "webhook_url": "",
+  "webhook_headers": {},
+  
+  "console_severities": ["Critical", "High", "Medium", "Low"],
+  "file_severities": ["Critical", "High", "Medium", "Low"],
+  "email_severities": ["Critical", "High"],
+  "webhook_severities": ["Critical", "High"],
+  
+  "sellable_sublocations": [
+    "Sales Floor",
+    "Front",
+    "Back Room",
+    "Stock Room"
+  ],
+  
+  "return_damaged_shipment_types": [
+    "Return Damaged",
+    "Damaged Return",
+    "DC Return"
+  ],
+  
+  "report_output_path": "monitoring_report.json",
+  "dashboard_refresh_interval_seconds": 60,
+  
+  "api_base_url": "https://api.nedapretail.com",
+  "api_token": "YOUR_API_TOKEN_HERE",
+  "api_timeout": 30,
+  "api_delay_between_requests": 0.5,
+  
+  "query_hours_back": 24,
+  "query_max_events": null,
+  "query_location": null,
+  
+  "use_api": true,
+  "damaged_only": true,
+  "events_file": null,
+  "save_events_file": "events_fetched.json",
+  "show_dashboard": true,
+  "generate_report": false,
+  "report_output_file": null,
+  
+  "calculate_shipment_metrics": true,
+  "export_shipment_metrics": true,
+  "shipment_metrics_output_file": "shipment_metrics.json",
+  
+  "stock_report_months": 2,
+  "stock_report_dispositions": [
+    "urn:epcglobal:cbv:disp:damaged"
+  ],
+  "stock_report_biz_steps": null,
+  
+  "_available_dispositions_reference": [
+    "urn:epcglobal:cbv:disp:sellable_not_accessible",
+    "urn:epcglobal:cbv:disp:sellable_accessible",
+    "http://nedapretail.com/disp/sellable_container_closed",
+    "http://nedapretail.com/disp/arrived",
+    "urn:epcglobal:cbv:disp:retail_sold",
+    "http://nedapretail.com/disp/online_sold",
+    "urn:epcglobal:cbv:disp:active",
+    "urn:epcglobal:cbv:disp:unknown",
+    "urn:epcglobal:cbv:disp:destroyed",
+    "urn:epcglobal:cbv:disp:in_progress",
+    "urn:epcglobal:cbv:disp:container_closed",
+    "urn:epcglobal:cbv:disp:in_transit",
+    "urn:epcglobal:cbv:disp:non_sellable_other",
+    "http://nedapretail.com/disp/received_order",
+    "http://nedapretail.com/disp/retail_reserved",
+    "http://nedapretail.com/disp/retail_reserved_for_peak",
+    "http://nedapretail.com/disp/on_display",
+    "http://nedapretail.com/disp/in_showcase",
+    "http://nedapretail.com/disp/lent",
+    "urn:epcglobal:cbv:disp:damaged",
+    "http://nedapretail.com/disp/faulty",
+    "http://nedapretail.com/disp/missing_article",
+    "http://nedapretail.com/disp/customized",
+    "http://nedapretail.com/disp/hemming"
+  ],
+  "_available_bizsteps_reference": [
+    "urn:epcglobal:cbv:bizstep:receiving",
+    "urn:epcglobal:cbv:bizstep:unpacking",
+    "urn:epcglobal:cbv:bizstep:cycle_counting",
+    "urn:epcglobal:cbv:bizstep:stocking",
+    "urn:epcglobal:cbv:bizstep:storing",
+    "urn:epcglobal:cbv:bizstep:retail_selling",
+    "urn:epcglobal:cbv:bizstep:commissioning",
+    "urn:epcglobal:cbv:bizstep:decommissioning",
+    "urn:epcglobal:cbv:bizstep:killing",
+    "urn:epcglobal:cbv:bizstep:shipping",
+    "urn:epcglobal:cbv:bizstep:holding",
+    "urn:epcglobal:cbv:bizstep:inspecting",
+    "http://nedapretail.com/bizstep:retail_reserving",
+    "http://nedapretail.com/bizstep:displaying",
+    "http://nedapretail.com/bizstep:lending",
+    "http://nedapretail.com/bizstep:customizing"
+  ]
+}

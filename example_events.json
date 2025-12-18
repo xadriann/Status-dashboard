@@ -1,0 +1,119 @@
+[
+  {
+    "event_id": "EVT-001",
+    "event_type": "DispositionChange",
+    "timestamp": "2024-01-15T10:30:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456789",
+    "location": "Store-001",
+    "sublocation": "Back Room",
+    "disposition": "Damaged",
+    "previous_disposition": "Available",
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-002",
+    "event_type": "ShipmentAdd",
+    "timestamp": "2024-01-15T11:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456789",
+    "location": "Store-001",
+    "disposition": "Damaged",
+    "shipment_type": "Regular",
+    "shipment_id": "SHIP-123",
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-003",
+    "event_type": "POSSale",
+    "timestamp": "2024-01-15T12:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456790",
+    "location": "Store-002",
+    "disposition": "Damaged",
+    "metadata": {
+      "transaction_id": "TXN-456",
+      "sale_amount": 29.99
+    }
+  },
+  {
+    "event_id": "EVT-004",
+    "event_type": "DispositionChange",
+    "timestamp": "2024-01-15T13:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456791",
+    "location": "Store-003",
+    "disposition": "Reserved for Peak",
+    "previous_disposition": "Damaged",
+    "metadata": {
+      "bulk_operation": true
+    }
+  },
+  {
+    "event_id": "EVT-005",
+    "event_type": "TagProgramming",
+    "timestamp": "2024-01-15T14:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456792",
+    "location": "Store-001",
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-006",
+    "event_type": "DispositionChange",
+    "timestamp": "2024-01-15T14:01:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456792",
+    "location": "Store-001",
+    "disposition": "Damaged",
+    "previous_disposition": null,
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-007",
+    "event_type": "DispositionChange",
+    "timestamp": "2024-01-15T15:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456793",
+    "location": "Store-004",
+    "sublocation": "Sales Floor",
+    "disposition": "Damaged",
+    "previous_disposition": "Available",
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-008",
+    "event_type": "DispositionChange",
+    "timestamp": "2024-01-15T16:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456794",
+    "location": "Store-005",
+    "disposition": "Retail_Sold",
+    "previous_disposition": "Available",
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-009",
+    "event_type": "DispositionChange",
+    "timestamp": "2024-01-15T17:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456794",
+    "location": "Store-005",
+    "disposition": "Damaged",
+    "previous_disposition": "Retail_Sold",
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-010",
+    "event_type": "DispositionChange",
+    "timestamp": "2024-01-15T18:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456795",
+    "location": "Store-006",
+    "disposition": "Damaged",
+    "previous_disposition": "Available",
+    "metadata": {}
+  },
+  {
+    "event_id": "EVT-011",
+    "event_type": "POSSale",
+    "timestamp": "2024-01-15T19:00:00",
+    "epc": "urn:epc:id:sgtin:123456.789012.3456795",
+    "location": "Store-006",
+    "metadata": {
+      "transaction_id": "TXN-789",
+      "sale_amount": 49.99
+    }
+  }
+]
+
