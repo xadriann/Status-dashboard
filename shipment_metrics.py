@@ -207,19 +207,38 @@ def export_metrics_to_json(
     return output_file
 
 
-def get_metrics_dataframe(metrics: Dict[str, StoreShipmentMetrics]) -> Any:
+def get_metrics_dataframe(metrics: Dict[str, StoreShipmentMetrics], location_mapper=None) -> Any:
     """Convert shipment metrics to a Pandas DataFrame."""
     import pandas as pd
     rows = []
     for m in metrics.values():
-        rows.append({
-            "Location": m.location,
+        row = {
+            "Location ID": m.location,
             "Total EPCs Affected (All Time)": m.total_epcs_affected,
             "Total EPCs Affected (Last Week)": m.total_epcs_last_week,
             "Total Shipping Events": m.events_count,
             "Shipping Events (Last Week)": m.events_last_week,
             "First Occurrence": m.first_occurrence,
             "Last Occurrence": m.last_occurrence
-        })
-    return pd.DataFrame(rows)
+        }
+        
+        # Add store and sublocation names if location_mapper is available
+        if location_mapper:
+            store_info = location_mapper.get_store_info(m.location)
+            row["Store Name"] = store_info.get("store_name") or ""
+            row["Sublocation Name"] = store_info.get("sublocation_name") or ""
+            row["Location"] = location_mapper.get_display_name(m.location)
+        else:
+            row["Store Name"] = ""
+            row["Sublocation Name"] = ""
+            row["Location"] = m.location
+        
+        rows.append(row)
+    
+    df = pd.DataFrame(rows)
+    # Reorder columns to put display name first if available
+    if "Location" in df.columns:
+        cols = ["Location", "Store Name", "Sublocation Name", "Location ID"] + [c for c in df.columns if c not in ["Location", "Store Name", "Sublocation Name", "Location ID"]]
+        df = df[cols]
+    return df
 

@@ -17,6 +17,7 @@ from config import MonitoringConfig, load_config
 from api_client import IDCloudAPIClient
 from shipment_metrics import fetch_and_calculate_metrics, print_metrics_report, export_metrics_to_json, get_metrics_dataframe
 from generate_damaged_stock_report import run_stock_disposition_report
+from location_mapper import LocationMapper
 
 
 def serialize_event_to_dict(event: EPCISEvent) -> Dict[str, Any]:
@@ -47,11 +48,12 @@ def serialize_event_to_dict(event: EPCISEvent) -> Dict[str, Any]:
 class MonitoringSystem:
     """Main monitoring system coordinator."""
     
-    def __init__(self, config: MonitoringConfig):
+    def __init__(self, config: MonitoringConfig, location_mapper: LocationMapper = None):
         self.config = config
-        self.processor = EventProcessor()
+        self.location_mapper = location_mapper
+        self.processor = EventProcessor(location_mapper=location_mapper)
         self.alert_manager = AlertManager()
-        self.dashboard = Dashboard(self.processor)
+        self.dashboard = Dashboard(self.processor, location_mapper=location_mapper)
         self._setup_alert_handlers()
     
     def _setup_alert_handlers(self):
@@ -239,8 +241,26 @@ def main():
     # Initialize variables for data tracking
     shipment_metrics_data = None
     
+    # Initialize location mapper (if API token is available)
+    location_mapper = None
+    if config.api_token and config.api_token.strip():
+        try:
+            print("Initializing location mapper...")
+            location_mapper = LocationMapper(
+                base_url=config.api_base_url,
+                api_token=config.api_token
+            )
+            location_mapper.initialize()
+            org_name = location_mapper.get_organization_name()
+            if org_name:
+                print(f"✅ Organization: {org_name}")
+            print(f"✅ Loaded {len(location_mapper.location_to_store)} location mappings")
+        except Exception as e:
+            print(f"⚠️  Warning: Could not initialize location mapper: {e}")
+            location_mapper = None
+    
     # Initialize monitoring system
-    system = MonitoringSystem(config)
+    system = MonitoringSystem(config, location_mapper=location_mapper)
     
     # Determine execution mode: use args if provided, otherwise use config
     # Check if flags were explicitly provided in command line
@@ -413,7 +433,7 @@ def main():
                 
                 # 3. Shipment Metrics Sheet (if calculated)
                 if shipment_metrics_data:
-                    metrics_df = make_naive(get_metrics_dataframe(shipment_metrics_data))
+                    metrics_df = make_naive(get_metrics_dataframe(shipment_metrics_data, location_mapper=location_mapper))
                     if not metrics_df.empty:
                         metrics_df.to_excel(writer, sheet_name="Shipment Metrics", index=False)
                         print("✅ Exported shipment metrics to 'Shipment Metrics'")
@@ -421,7 +441,7 @@ def main():
                 # 4. Stock Disposition Report (History)
                 print("⏳ Fetching historical stock disposition data (this may take a while)...")
                 try:
-                    stock_history_dfs = run_stock_disposition_report(config)
+                    stock_history_dfs = run_stock_disposition_report(config, location_mapper=location_mapper)
                     if stock_history_dfs:
                         for sheet_name, df in stock_history_dfs.items():
                             # Limit sheet name length for Excel (max 31 chars)

@@ -508,3 +508,37 @@
   "resolved": false,
   "resolved_at": null
 }
+{
+  "alert_id": "R1_1548af2d-7323-4040-86f1-49f6d30eb142",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-21T11:33:06.679000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.003530.10000216",
+  "location": "http://nedapretail.com/loc/store-553072",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_23d56ca2-8961-4855-a7a8-0328094604f6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-21T16:24:05.521000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.028499.10002730",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}

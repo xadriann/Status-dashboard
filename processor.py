@@ -17,11 +17,12 @@ from detectors import get_all_detectors, MisuseDetector
 class EventProcessor:
     """Processes EPCIS events and triggers misuse detection."""
     
-    def __init__(self):
+    def __init__(self, location_mapper=None):
         self.detectors = get_all_detectors()
         self.alerts: List[Alert] = []
         self.processed_events: List[EPCISEvent] = []
         self.context: Dict[str, Any] = defaultdict(dict)
+        self.location_mapper = location_mapper  # LocationMapper instance
         
         # Track EPC state history for detecting disposition changes
         self.epc_history: Dict[str, List[EPCISEvent]] = defaultdict(list)
@@ -42,6 +43,8 @@ class EventProcessor:
             try:
                 alert = detector.detect(event, self.context)
                 if alert:
+                    # Enrich alert with store and sublocation names
+                    self._enrich_alert_with_location_names(alert)
                     alerts.append(alert)
                     self.alerts.append(alert)
             except Exception as e:
@@ -134,6 +137,13 @@ class EventProcessor:
                 alert.resolved = True
                 alert.resolved_at = datetime.now()
                 break
+    
+    def _enrich_alert_with_location_names(self, alert: Alert):
+        """Enrich alert with store and sublocation names from location_mapper."""
+        if self.location_mapper and alert.location:
+            store_info = self.location_mapper.get_store_info(alert.location)
+            alert.store_name = store_info.get("store_name")
+            alert.sublocation_name = store_info.get("sublocation_name")
 
 
 class EPCISEventParser:

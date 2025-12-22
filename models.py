@@ -191,6 +191,8 @@ class Alert:
     resolved: bool = False
     resolved_at: Optional[datetime] = None
     event_id: Optional[str] = None  # Reference to EPCIS event
+    store_name: Optional[str] = None  # Human-readable store name
+    sublocation_name: Optional[str] = None  # Human-readable sublocation name
 
 
 @dataclass

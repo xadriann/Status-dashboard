@@ -200,14 +200,16 @@ def get_sheet_name(disposition_url):
 # Interactive selection functions removed
 # All configuration is now loaded from config.json via config.py
 
-def process_disposition(token, stores, disposition, start_time, end_time, biz_steps=None):
-    """Process a single disposition and return DataFrame"""
-    # Data structure: store_name -> week_str -> count
-    data = defaultdict(lambda: defaultdict(int))
-    # Store current stock: store_name -> current_count
-    current_stock_data = {}
-    # Store total counts: store_name -> total_count
-    total_store_counts = {}
+def process_disposition(token, stores, disposition, start_time, end_time, biz_steps=None, location_mapper=None):
+    """Process a single disposition and return DataFrame aggregated by store (not sublocations)"""
+    # Mapping: sublocation_id -> store_location_id (to aggregate sublocations to store level)
+    sublocation_to_store = {}
+    # Data structure: store_location_id -> {store_name, weeks: {week_str -> count}}
+    store_data = defaultdict(lambda: {"store_name": None, "weeks": defaultdict(int)})
+    # Store current stock: store_location_id -> current_count (aggregated from all sublocations)
+    store_current_stock = {}
+    # Store total counts: store_location_id -> total_count
+    store_total_counts = {}
     all_weeks = set()
 
     print(f"\nProcessing disposition: {get_sheet_name(disposition)}...")
@@ -220,31 +222,48 @@ def process_disposition(token, stores, disposition, start_time, end_time, biz_st
                 print() # New line when finished
             
         store_name = store.get("name")
-        # Collect all locations for this store
-        locations_to_check = []
+        store_location = store.get("location")
         
-        if store.get("location"):
-            locations_to_check.append(store.get("location"))
-            
+        if not store_location:
+            continue
+        
+        # Map store location to itself
+        sublocation_to_store[store_location] = store_location
+        store_data[store_location]["store_name"] = store_name
+        
+        # Get total store count (all articles) - this is at store level
+        total_count = get_total_store_count(token, store)
+        if total_count > 0:
+            store_total_counts[store_location] = total_count
+        
+        # Collect all locations for this store (including sublocations)
+        locations_to_check = [store_location]
+        
+        # Map sublocations to store location and collect them
         sublocations = store.get("sublocations", [])
         for sub in sublocations:
-            locations_to_check.append(sub.get("location"))
+            sublocation_location = sub.get("location")
+            if sublocation_location:
+                locations_to_check.append(sublocation_location)
+                # Map sublocation to its parent store location
+                sublocation_to_store[sublocation_location] = store_location
         
         # Remove duplicates and None
         locations_to_check = list(set([l for l in locations_to_check if l]))
         
         if not locations_to_check:
             continue
-
-        # Get total store count (all articles)
-        total_count = get_total_store_count(token, store)
-        if total_count > 0:
-            total_store_counts[store_name] = total_count
-
-        # Get current stock for this store (only main location)
-        current_count = get_current_stock(token, store, disposition)
-        if current_count > 0:
-            current_stock_data[store_name] = current_count
+        
+        # Get current stock for each location (store + sublocations)
+        for loc_id in locations_to_check:
+            # Create a temporary store dict for get_current_stock
+            temp_store = {"location": loc_id}
+            current_count = get_current_stock(token, temp_store, disposition)
+            if current_count > 0:
+                # Aggregate to store level
+                if store_location not in store_current_stock:
+                    store_current_stock[store_location] = 0
+                store_current_stock[store_location] += current_count
         
         # Query events for all locations of this store in one call
         events = get_epcis_events(token, locations_to_check, start_time, end_time, disposition, biz_steps)
@@ -258,6 +277,16 @@ def process_disposition(token, stores, disposition, start_time, end_time, biz_st
                     event_time = datetime.fromisoformat(event_time_str.replace("Z", "+00:00"))
                     week_str = event_time.strftime("%Y-W%W")
                     
+                    # Get location from event (biz_location or read_point)
+                    event_location = event.get("biz_location") or event.get("read_point")
+                    if not event_location:
+                        continue
+                    
+                    # Map event location to store location (aggregate sublocations)
+                    store_location_for_event = sublocation_to_store.get(event_location)
+                    if not store_location_for_event:
+                        continue
+                    
                     # Count EPCs in this event
                     # Check both epc_list (for object_event) and child_epcs (for aggregation_event)
                     epc_list = event.get("epc_list", [])
@@ -265,30 +294,42 @@ def process_disposition(token, stores, disposition, start_time, end_time, biz_st
                     count = len(epc_list) + len(child_epcs)
                     
                     if count > 0:
-                        data[store_name][week_str] += count
+                        # Aggregate to store level
+                        store_data[store_location_for_event]["weeks"][week_str] += count
                         all_weeks.add(week_str)
                 except ValueError as e:
                     pass # Skip if date parse fails
 
-    # Create DataFrame
+    # Create DataFrame - one row per store
     sorted_weeks = sorted(list(all_weeks))
     
-    if not sorted_weeks and not current_stock_data:
-        df = pd.DataFrame(columns=["Store", "Total Articles", "Current Stock", "% of Total"])
+    if not sorted_weeks and not store_current_stock:
+        df = pd.DataFrame(columns=["Store Name", "Store Location ID", "Total Articles", "Current Stock", "% of Total"])
     else:
         rows = []
-        # Combine stores from both current stock and historical data
-        all_stores = set(data.keys()) | set(current_stock_data.keys())
+        # Get all store locations
+        all_store_locations = set(store_data.keys()) | set(store_current_stock.keys())
         
-        for store_name in all_stores:
-            row = {"Store": store_name}
+        for store_location_id in all_store_locations:
+            store_info_data = store_data.get(store_location_id, {})
+            store_name = store_info_data.get("store_name")
+            
+            # If location_mapper is available, use it to get store name
+            if location_mapper:
+                store_info = location_mapper.get_store_info(store_location_id)
+                store_name = store_info.get("store_name") or store_name
+            
+            row = {
+                "Store Name": store_name or "",
+                "Store Location ID": store_location_id
+            }
             
             # Add total store count
-            total_count = total_store_counts.get(store_name, 0)
+            total_count = store_total_counts.get(store_location_id, 0)
             row["Total Articles"] = total_count
             
-            # Add current stock with disposition
-            current_count = current_stock_data.get(store_name, 0)
+            # Add current stock with disposition (aggregated from all sublocations)
+            current_count = store_current_stock.get(store_location_id, 0)
             row["Current Stock"] = current_count
             
             # Calculate percentage
@@ -298,32 +339,34 @@ def process_disposition(token, stores, disposition, start_time, end_time, biz_st
             else:
                 row["% of Total"] = 0
             
-            weeks_data = data.get(store_name, {})
+            # Add weekly data (aggregated from all sublocations)
+            weeks_data = store_info_data.get("weeks", {})
             for week in sorted_weeks:
                 row[week] = weeks_data.get(week, 0)
             rows.append(row)
             
         df = pd.DataFrame(rows)
-        # Reorder columns: Store, Total Articles, Current Stock, % of Total, then weeks sorted
-        cols = ["Store", "Total Articles", "Current Stock", "% of Total"] + sorted_weeks
+        # Reorder columns: Store Name, Store Location ID, Total Articles, Current Stock, % of Total, then weeks sorted
+        cols = ["Store Name", "Store Location ID", "Total Articles", "Current Stock", "% of Total"] + sorted_weeks
         if cols[1:]:  # Only reorder if we have data columns
             df = df[cols]
     
     return df
 
-def run_stock_disposition_report(config=None):
+def run_stock_disposition_report(config=None, location_mapper=None):
     """
     Run the stock disposition report and return DataFrames for each disposition.
     
     Args:
         config: MonitoringConfig object. If None, it will be loaded.
+        location_mapper: LocationMapper instance for translating location IDs to names.
         
     Returns:
         Dict[str, pd.DataFrame]: Mapping of sheet names to DataFrames.
     """
     if config is None:
         config = load_config()
-    
+        
     token = config.api_token
     if not token:
         print("Error: API token is not configured.")
@@ -332,7 +375,7 @@ def run_stock_disposition_report(config=None):
     selected_dispositions = config.stock_report_dispositions
     if not selected_dispositions:
         return {}
-    
+        
     # Mapping bizSteps
     disposition_bizsteps = {}
     config_biz_steps = config.stock_report_biz_steps or {}
@@ -360,10 +403,10 @@ def run_stock_disposition_report(config=None):
     disposition_dataframes = {}
     for disposition in selected_dispositions:
         biz_steps = disposition_bizsteps[disposition]
-        df = process_disposition(token, stores, disposition, start_time, end_time, biz_steps)
+        df = process_disposition(token, stores, disposition, start_time, end_time, biz_steps, location_mapper)
         sheet_name = get_sheet_name(disposition)
         disposition_dataframes[sheet_name] = df
-    
+        
     return disposition_dataframes
 
 def main():
