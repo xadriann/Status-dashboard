@@ -323,7 +323,7 @@ def run_stock_disposition_report(config=None):
     """
     if config is None:
         config = load_config()
-        
+    
     token = config.api_token
     if not token:
         print("Error: API token is not configured.")
@@ -332,7 +332,7 @@ def run_stock_disposition_report(config=None):
     selected_dispositions = config.stock_report_dispositions
     if not selected_dispositions:
         return {}
-        
+    
     # Mapping bizSteps
     disposition_bizsteps = {}
     config_biz_steps = config.stock_report_biz_steps or {}
@@ -363,7 +363,7 @@ def run_stock_disposition_report(config=None):
         df = process_disposition(token, stores, disposition, start_time, end_time, biz_steps)
         sheet_name = get_sheet_name(disposition)
         disposition_dataframes[sheet_name] = df
-        
+    
     return disposition_dataframes
 
 def main():
