@@ -66,6 +66,14 @@ DISPOSITION_TO_BIZSTEP = {
     "http://nedapretail.com/disp/hemming": ["http://nedapretail.com/bizstep/customizing"],
 }
 
+# Biz steps that must always be included in EPCIS queries (enfoque híbrido)
+MANDATORY_BIZ_STEPS = [
+    "urn:epcglobal:cbv:bizstep:cycle_counting",
+    "urn:epcglobal:cbv:bizstep:shipping",
+    "urn:epcglobal:cbv:bizstep:receiving",
+    "urn:epcglobal:cbv:bizstep:retail_selling"
+]
+
 def get_epcis_events(token, location_ids, start_time, end_time, disposition, biz_steps=None):
     """Get EPCIS events where EPCs changed TO the specified disposition"""
     url = f"{BASE_URL}/epcis/v3/query"
@@ -73,6 +81,16 @@ def get_epcis_events(token, location_ids, start_time, end_time, disposition, biz
     # Use provided biz_steps or fallback to default mapping if None passed
     if biz_steps is None:
         biz_steps = DISPOSITION_TO_BIZSTEP.get(disposition)
+    
+    # Initialize biz_steps list if None or empty
+    if not biz_steps:
+        biz_steps = []
+    elif not isinstance(biz_steps, list):
+        biz_steps = [biz_steps]
+    
+    # Combine disposition-specific biz_steps with mandatory ones (enfoque híbrido)
+    # Remove duplicates while preserving order
+    all_biz_steps = list(dict.fromkeys(biz_steps + MANDATORY_BIZ_STEPS))
 
     # Filter out None values
     valid_locations = [loc for loc in location_ids if loc]
@@ -88,7 +106,7 @@ def get_epcis_events(token, location_ids, start_time, end_time, disposition, biz
         {"name": "GE_eventTime", "value": start_str},
         {"name": "LT_eventTime", "value": end_str},
         {"name": "EQ_disposition", "values": [disposition]},
-        {"name": "EQ_bizStep", "values": biz_steps},
+        {"name": "EQ_bizStep", "values": all_biz_steps},
         {"name": "EQ_bizLocation", "values": valid_locations}
     ]
     
@@ -139,6 +157,134 @@ def get_current_stock(token, store, disposition):
         total_count += quantity
     
     return total_count
+
+def get_stock_by_sublocation(token, store, disposition, location_mapper=None):
+    """Get current RFID stock count grouped by sublocation type (store, stockroom, sales_floor)"""
+    location_id = store.get("location")
+    if not location_id:
+        return {}, 0
+    
+    url = f"{BASE_URL}/rfid_stock/v1/retrieve_grouped_by_disposition"
+    params = {
+        "location": location_id,
+        "dispositions[]": disposition
+    }
+    
+    response = requests.get(url, headers=get_headers(token), params=params)
+    if response.status_code != 200:
+        return {}, 0
+        
+    data = response.json()
+    stocks = data.get("stocks", [])
+    
+    # Dictionary: sublocation_type -> quantity
+    # Keys: "Store", "Stockroom", "Sales Floor"
+    stock_by_type = {
+        "Store": 0,
+        "Stockroom": 0,
+        "Sales Floor": 0
+    }
+    total_count = 0
+    
+    for stock in stocks:
+        quantity = stock.get("quantity", 0)
+        stock_location = stock.get("location")
+        
+        if stock_location:
+            # Determine sublocation type
+            if stock_location == location_id:
+                # This is the main store location
+                location_type = "Store"
+            else:
+                # This is a sublocation - get its type
+                if location_mapper:
+                    store_info = location_mapper.get_store_info(stock_location)
+                    sublocation_type = store_info.get("sublocation_type")
+                    
+                    if sublocation_type == "stockroom":
+                        location_type = "Stockroom"
+                    elif sublocation_type == "sales_floor":
+                        location_type = "Sales Floor"
+                    else:
+                        # Unknown type or offsite_storage - could add more types if needed
+                        location_type = "Store"  # Default to Store for unknown types
+                else:
+                    # Without location_mapper, we can't determine type, default to Store
+                    location_type = "Store"
+            
+            # Aggregate by location type
+            stock_by_type[location_type] += quantity
+            total_count += quantity
+    
+    # Remove types with zero stock to keep the dictionary clean
+    stock_by_type = {k: v for k, v in stock_by_type.items() if v > 0}
+    
+    return stock_by_type, total_count
+
+def get_stock_by_sublocation_all_dispositions(token, store, dispositions, location_mapper=None):
+    """Get current RFID stock count for all dispositions, grouped by disposition and sublocation type"""
+    location_id = store.get("location")
+    if not location_id or not dispositions:
+        return {}
+    
+    url = f"{BASE_URL}/rfid_stock/v1/retrieve_grouped_by_disposition"
+    params = {
+        "location": location_id,
+        "dispositions[]": dispositions  # Pass array of all dispositions
+    }
+    
+    response = requests.get(url, headers=get_headers(token), params=params)
+    if response.status_code != 200:
+        return {}
+        
+    data = response.json()
+    stocks = data.get("stocks", [])
+    
+    # Dictionary: disposition -> {location_type -> quantity}
+    # Result structure: {disposition: {"Store": 0, "Stockroom": 0, "Sales Floor": 0}}
+    result = {disp: {"Store": 0, "Stockroom": 0, "Sales Floor": 0} for disp in dispositions}
+    
+    for stock in stocks:
+        quantity = stock.get("quantity", 0)
+        stock_location = stock.get("location")
+        stock_disposition = stock.get("disposition")
+        
+        if not stock_location or not stock_disposition:
+            continue
+        
+        # Skip if this disposition is not in our list
+        if stock_disposition not in result:
+            continue
+        
+        # Determine sublocation type
+        if stock_location == location_id:
+            # This is the main store location
+            location_type = "Store"
+        else:
+            # This is a sublocation - get its type
+            if location_mapper:
+                store_info = location_mapper.get_store_info(stock_location)
+                sublocation_type = store_info.get("sublocation_type")
+                
+                if sublocation_type == "stockroom":
+                    location_type = "Stockroom"
+                elif sublocation_type == "sales_floor":
+                    location_type = "Sales Floor"
+                else:
+                    location_type = "Store"  # Default to Store for unknown types
+            else:
+                location_type = "Store"
+        
+        # Aggregate by disposition and location type
+        result[stock_disposition][location_type] += quantity
+    
+    # Remove types with zero stock and dispositions with no stock
+    for disp in list(result.keys()):
+        result[disp] = {k: v for k, v in result[disp].items() if v > 0}
+        if not any(result[disp].values()):
+            del result[disp]
+    
+    return result
 
 def get_total_store_count(token, store):
     """Get total RFID count for the store's main location"""
@@ -200,17 +346,26 @@ def get_sheet_name(disposition_url):
 # Interactive selection functions removed
 # All configuration is now loaded from config.json via config.py
 
-def process_disposition(token, stores, disposition, start_time, end_time, biz_steps=None, location_mapper=None):
-    """Process a single disposition and return DataFrame aggregated by store (not sublocations)"""
+def process_disposition(token, stores, disposition, start_time, end_time, biz_steps=None, location_mapper=None, store_stock_cache=None):
+    """Process a single disposition and return DataFrame aggregated by store (not sublocations)
+    
+    Args:
+        store_stock_cache: Optional dict with pre-fetched stock data by store location
+                          Format: {store_location_id: {disposition: {location_type: quantity}}}
+    """
     # Mapping: sublocation_id -> store_location_id (to aggregate sublocations to store level)
     sublocation_to_store = {}
     # Data structure: store_location_id -> {store_name, weeks: {week_str -> count}}
     store_data = defaultdict(lambda: {"store_name": None, "weeks": defaultdict(int)})
     # Store current stock: store_location_id -> current_count (aggregated from all sublocations)
     store_current_stock = {}
+    # Store stock by sublocation type: store_location_id -> {location_type -> quantity}
+    # location_type can be: "Store", "Stockroom", "Sales Floor"
+    store_stock_by_sublocation = {}
     # Store total counts: store_location_id -> total_count
     store_total_counts = {}
     all_weeks = set()
+    all_location_types = set()  # Track all location types found (Store, Stockroom, Sales Floor)
 
     print(f"\nProcessing disposition: {get_sheet_name(disposition)}...")
     
@@ -254,16 +409,22 @@ def process_disposition(token, stores, disposition, start_time, end_time, biz_st
         if not locations_to_check:
             continue
         
-        # Get current stock for each location (store + sublocations)
-        for loc_id in locations_to_check:
-            # Create a temporary store dict for get_current_stock
-            temp_store = {"location": loc_id}
-            current_count = get_current_stock(token, temp_store, disposition)
-            if current_count > 0:
-                # Aggregate to store level
-                if store_location not in store_current_stock:
-                    store_current_stock[store_location] = 0
-                store_current_stock[store_location] += current_count
+        # Get current stock grouped by sublocation type for the store
+        # Always use cache (should be pre-fetched in run_stock_disposition_report)
+        if store_stock_cache and store_location in store_stock_cache:
+            stock_data = store_stock_cache[store_location].get(disposition, {})
+            stock_by_type = stock_data.copy()
+            total_stock = sum(stock_by_type.values())
+        else:
+            # If cache is not available, return empty (should not happen if called correctly)
+            stock_by_type = {}
+            total_stock = 0
+        
+        if total_stock > 0:
+            store_current_stock[store_location] = total_stock
+            store_stock_by_sublocation[store_location] = stock_by_type
+            # Track all location types for column generation
+            all_location_types.update(stock_by_type.keys())
         
         # Query events for all locations of this store in one call
         events = get_epcis_events(token, locations_to_check, start_time, end_time, disposition, biz_steps)
@@ -339,6 +500,16 @@ def process_disposition(token, stores, disposition, start_time, end_time, biz_st
             else:
                 row["% of Total"] = 0
             
+            # Add stock distribution by location type
+            stock_by_type = store_stock_by_sublocation.get(store_location_id, {})
+            # Define order: Store, Stockroom, Sales Floor
+            location_type_order = ["Store", "Stockroom", "Sales Floor"]
+            for location_type in location_type_order:
+                if location_type in all_location_types:
+                    # Column name: "Stock: {location_type}"
+                    col_name = f"Stock: {location_type}"
+                    row[col_name] = stock_by_type.get(location_type, 0)
+            
             # Add weekly data (aggregated from all sublocations)
             weeks_data = store_info_data.get("weeks", {})
             for week in sorted_weeks:
@@ -346,8 +517,11 @@ def process_disposition(token, stores, disposition, start_time, end_time, biz_st
             rows.append(row)
             
         df = pd.DataFrame(rows)
-        # Reorder columns: Store Name, Store Location ID, Total Articles, Current Stock, % of Total, then weeks sorted
-        cols = ["Store Name", "Store Location ID", "Total Articles", "Current Stock", "% of Total"] + sorted_weeks
+        # Reorder columns: Store Name, Store Location ID, Total Articles, Current Stock, % of Total, 
+        # then location type columns in order (Store, Stockroom, Sales Floor), then weeks sorted
+        location_type_order = ["Store", "Stockroom", "Sales Floor"]
+        location_type_cols = [f"Stock: {loc_type}" for loc_type in location_type_order if loc_type in all_location_types]
+        cols = ["Store Name", "Store Location ID", "Total Articles", "Current Stock", "% of Total"] + location_type_cols + sorted_weeks
         if cols[1:]:  # Only reorder if we have data columns
             df = df[cols]
     
@@ -393,17 +567,62 @@ def run_stock_disposition_report(config=None, location_mapper=None):
     except Exception as e:
         print(f"Error fetching stores: {e}")
         return {}
+    
+    # Filter stores based on configuration
+    original_store_count = len(stores)
+    
+    if config.stock_report_store_codes:
+        # Filter by store codes
+        stores = [s for s in stores if s.get("store_code") in config.stock_report_store_codes]
+        print(f"Filtered to {len(stores)} store(s) by store codes: {config.stock_report_store_codes}")
+    
+    elif config.stock_report_store_locations:
+        # Filter by location IDs
+        stores = [s for s in stores if s.get("location") in config.stock_report_store_locations]
+        print(f"Filtered to {len(stores)} store(s) by location IDs: {config.stock_report_store_locations}")
+    
+    if config.stock_report_store_limit and config.stock_report_store_limit > 0:
+        # Limit number of stores
+        stores = stores[:config.stock_report_store_limit]
+        if len(stores) < original_store_count:
+            print(f"Limited to first {len(stores)} store(s) (from {original_store_count} total)")
+    
+    if not stores:
+        print("No stores to process after filtering.")
+        return {}
 
     # Time range
     end_time = datetime.now(timezone.utc)
     months_to_look_back = config.stock_report_months
     start_time = end_time - timedelta(days=30 * months_to_look_back)
     
-    # Process each disposition
+    # Pre-fetch stock data for all dispositions in one call per store
+    print("\nFetching stock data for all dispositions...")
+    store_stock_cache = {}  # {store_location_id: {disposition: {location_type: quantity}}}
+    
+    total_stores = len(stores)
+    for i, store in enumerate(stores, 1):
+        if i % 10 == 0 or i == total_stores:
+            print(f"  Stock fetch progress: {i}/{total_stores} stores...", end='\r')
+            if i == total_stores:
+                print()  # New line when finished
+        
+        store_location = store.get("location")
+        if not store_location:
+            continue
+        
+        temp_store = {"location": store_location}
+        stock_data = get_stock_by_sublocation_all_dispositions(token, temp_store, selected_dispositions, location_mapper)
+        if stock_data:
+            store_stock_cache[store_location] = stock_data
+    
+    print("Stock data fetched. Processing dispositions...")
+    
+    # Process each disposition (using cached stock data)
     disposition_dataframes = {}
     for disposition in selected_dispositions:
         biz_steps = disposition_bizsteps[disposition]
-        df = process_disposition(token, stores, disposition, start_time, end_time, biz_steps, location_mapper)
+        df = process_disposition(token, stores, disposition, start_time, end_time, biz_steps, location_mapper, store_stock_cache)
         sheet_name = get_sheet_name(disposition)
         disposition_dataframes[sheet_name] = df
         

@@ -67,6 +67,9 @@
     "urn:epcglobal:cbv:disp:damaged"
   ],
   "stock_report_biz_steps": null,
+  "stock_report_store_limit": null,
+  "stock_report_store_codes": null,
+  "stock_report_store_locations": null,
   
   "_available_dispositions_reference": [
     "urn:epcglobal:cbv:disp:sellable_not_accessible",

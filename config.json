@@ -64,9 +64,12 @@
   "shipment_metrics_output_file": "shipment_metrics.json",
   "stock_report_months": 2,
   "stock_report_dispositions": [
-    "urn:epcglobal:cbv:disp:damaged"
+    "urn:epcglobal:cbv:disp:damaged", "http://nedapretail.com/disp/on_display", "http://nedapretail.com/disp/in_showcase"
   ],
   "stock_report_biz_steps": null,
+  "stock_report_store_limit": null,
+  "stock_report_store_codes": null,
+  "stock_report_store_locations": null,
   "_available_dispositions_reference": [
     "urn:epcglobal:cbv:disp:sellable_not_accessible",
     "urn:epcglobal:cbv:disp:sellable_accessible",

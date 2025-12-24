@@ -113,6 +113,9 @@ class EventProcessor:
             prev_disp = self.get_previous_disposition(primary_epc, event)
             self.context["previous_disposition"] = prev_disp
             self.context["epc"] = primary_epc
+        
+        # Add location_mapper to context for detectors that need it
+        self.context["location_mapper"] = self.location_mapper
     
     def get_alerts_by_severity(self, severity: str) -> List[Alert]:
         """Get alerts filtered by severity."""

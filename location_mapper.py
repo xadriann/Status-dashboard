@@ -74,11 +74,13 @@ class LocationMapper:
                 for sublocation in sublocations:
                     sublocation_location = sublocation.get("location")
                     sublocation_name = sublocation.get("name", "Unknown Sublocation")
+                    sublocation_type = sublocation.get("sublocation_type")  # sales_floor, stockroom, offsite_storage
                     
                     if sublocation_location:
                         self.location_to_store[sublocation_location] = {
                             "store_name": store_name,
                             "sublocation_name": sublocation_name,
+                            "sublocation_type": sublocation_type,
                             "store_location": store_location or sublocation_location
                         }
             
@@ -106,6 +108,7 @@ class LocationMapper:
         return {
             "store_name": info.get("store_name"),
             "sublocation_name": info.get("sublocation_name"),
+            "sublocation_type": info.get("sublocation_type"),
             "store_location": info.get("store_location", location_id)
         }
     

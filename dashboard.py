@@ -105,7 +105,7 @@ class Dashboard:
         return rule_stats
     
     def get_location_rankings(self, metric: str = "total_alerts") -> List[Dict[str, Any]]:
-        """Get location rankings by various metrics."""
+        """Get location rankings by various metrics, grouped by store location (not sublocations)."""
         location_data = defaultdict(lambda: {
             "total_alerts": 0,
             "critical_alerts": 0,
@@ -114,8 +114,22 @@ class Dashboard:
             "low_alerts": 0
         })
         
+        # Map to store location IDs
+        store_location_map = {}  # alert.location -> store_location_id
+        
         for alert in self.processor.get_unresolved_alerts():
-            loc_data = location_data[alert.location]
+            # Get store location ID (not sublocation)
+            store_location_id = alert.location  # Default to alert location
+            
+            if self.location_mapper:
+                store_info = self.location_mapper.get_store_info(alert.location)
+                store_location_id = store_info.get("store_location") or alert.location
+                store_location_map[alert.location] = store_location_id
+            else:
+                store_location_map[alert.location] = alert.location
+            
+            # Aggregate by store location
+            loc_data = location_data[store_location_id]
             loc_data["total_alerts"] += 1
             if alert.severity == AlertSeverity.CRITICAL:
                 loc_data["critical_alerts"] += 1
@@ -127,17 +141,15 @@ class Dashboard:
                 loc_data["low_alerts"] += 1
         
         rankings = []
-        for loc, data in location_data.items():
+        for store_loc, data in location_data.items():
             ranking_entry = {
-                "location": loc,
+                "location": store_loc,
                 **data
             }
-            # Add store and sublocation names if available
+            # Add store name if available
             if self.location_mapper:
-                store_info = self.location_mapper.get_store_info(loc)
+                store_info = self.location_mapper.get_store_info(store_loc)
                 ranking_entry["store_name"] = store_info.get("store_name")
-                ranking_entry["sublocation_name"] = store_info.get("sublocation_name")
-                ranking_entry["display_name"] = self.location_mapper.get_display_name(loc)
             rankings.append(ranking_entry)
         
         return sorted(rankings, key=lambda x: x.get(metric, 0), reverse=True)
@@ -226,13 +238,22 @@ class Dashboard:
         return pd.DataFrame(data)
 
     def get_rankings_dataframe(self) -> Any:
-        """Get location rankings as a Pandas DataFrame."""
+        """Get location rankings as a Pandas DataFrame, grouped by store location."""
         import pandas as pd
         rankings = self.get_location_rankings()
         df = pd.DataFrame(rankings)
-        # Reorder columns to put display_name first if available
-        if 'display_name' in df.columns:
-            cols = ['display_name', 'store_name', 'sublocation_name', 'location'] + [c for c in df.columns if c not in ['display_name', 'store_name', 'sublocation_name', 'location']]
-            df = df[cols]
+        
+        # Remove display_name and sublocation_name columns if they exist
+        columns_to_remove = ['display_name', 'sublocation_name']
+        df = df.drop(columns=[col for col in columns_to_remove if col in df.columns])
+        
+        # Reorder columns: location, store_name, then metrics
+        base_cols = ['location']
+        if 'store_name' in df.columns:
+            base_cols.append('store_name')
+        metric_cols = [c for c in df.columns if c not in base_cols]
+        cols = base_cols + metric_cols
+        df = df[cols]
+        
         return df
 

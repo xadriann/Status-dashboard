@@ -87,6 +87,11 @@ class MonitoringConfig:
     stock_report_months: int = 2  # Number of months to look back for the stock report
     stock_report_dispositions: List[str] = field(default_factory=lambda: ["urn:epcglobal:cbv:disp:damaged"])  # Dispositions to include
     stock_report_biz_steps: Optional[Dict[str, List[str]]] = None  # Optional custom bizSteps per disposition
+    
+    # Store filtering for stock report
+    stock_report_store_limit: Optional[int] = None  # Maximum number of stores to process (e.g., 10)
+    stock_report_store_codes: Optional[List[str]] = None  # Specific store codes to include (e.g., ["STORE001", "STORE002"])
+    stock_report_store_locations: Optional[List[str]] = None  # Specific store location IDs to include
 
 
 def load_config(config_file: str = None) -> MonitoringConfig:

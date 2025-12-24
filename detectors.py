@@ -9,6 +9,7 @@ from collections import defaultdict
 from models import (
     EPCISEvent, Alert, AlertSeverity, DispositionURN, BusinessStep
 )
+from config import load_config
 
 
 class MisuseDetector:
@@ -103,47 +104,86 @@ class Rule2_PersistentDamagedInReceiving(MisuseDetector):
 
 
 class Rule3_DamagedOverwritten(MisuseDetector):
-    """Rule 3: Damaged status overwritten by non-persistent statuses."""
+    """Rule 3: Status Released - Detects when a status is released (sellable_accessible, sellable_not_accessible, or active) 
+    in a biz_step associated with the dispositions configured in stock_report_dispositions."""
     
     def __init__(self):
-        super().__init__(3, "Damaged Status Overwritten", AlertSeverity.HIGH)
-        # Non-persistent statuses that shouldn't overwrite damaged
-        self.non_persistent_statuses = {
+        super().__init__(3, "Status Released", AlertSeverity.HIGH)
+        
+        # Load configuration to get selected dispositions
+        config = load_config()
+        selected_dispositions = config.stock_report_dispositions or []
+        
+        # Get biz_steps from custom config or default mapping
+        # Import the mapping from generate_damaged_stock_report
+        try:
+            from generate_damaged_stock_report import DISPOSITION_TO_BIZSTEP
+        except ImportError:
+            # Fallback mapping if import fails
+            DISPOSITION_TO_BIZSTEP = {}
+        
+        # Collect all biz_steps from selected dispositions
+        self.target_biz_steps = set()
+        config_biz_steps = config.stock_report_biz_steps or {}
+        
+        for disposition in selected_dispositions:
+            # Use custom biz_steps from config if available, otherwise use default mapping
+            if disposition in config_biz_steps:
+                biz_steps = config_biz_steps[disposition]
+            else:
+                biz_steps = DISPOSITION_TO_BIZSTEP.get(disposition, [])
+            
+            if biz_steps:
+                if isinstance(biz_steps, list):
+                    self.target_biz_steps.update(biz_steps)
+                else:
+                    self.target_biz_steps.add(biz_steps)
+        
+        # Statuses that indicate a status release
+        self.released_statuses = {
             DispositionURN.SELLABLE_ACCESSIBLE.value,
             DispositionURN.SELLABLE_NOT_ACCESSIBLE.value,
             DispositionURN.ACTIVE.value
         }
     
     def detect(self, event: EPCISEvent, context: Dict[str, Any]) -> Optional[Alert]:
-        previous_disp = context.get("previous_disposition")
-        current_disp = event.get_disposition()
+        # If no target biz_steps configured, skip detection
+        if not self.target_biz_steps:
+            return None
         
-        # Check if damaged was overwritten by non-persistent status
-        if (previous_disp and current_disp and
-            DispositionURN.is_damaged(previous_disp) and
-            current_disp in self.non_persistent_statuses):
-            primary_epc = event.get_primary_epc()
-            location = event.get_location()
-            is_bulk = context.get("is_bulk_operation", False)
-            
-            if primary_epc and location:
-                return Alert(
-                    alert_id=f"R3_{event.id}",
-                    rule_id=self.rule_id,
-                    rule_name=self.rule_name,
-                    severity=self.severity,
-                    timestamp=event.event_time,
-                    epc=primary_epc,
-                    location=location,
-                    description=f"Damaged status overwritten by {current_disp}",
-                    details={
-                        "previous_disposition": previous_disp,
-                        "new_disposition": current_disp,
-                        "is_bulk_operation": is_bulk,
-                        "biz_step": event.biz_step
-                    },
-                    event_id=event.id
-                )
+        # Check if event has a biz_step that matches our target biz_steps
+        event_biz_step = event.biz_step
+        if not event_biz_step or event_biz_step not in self.target_biz_steps:
+            return None
+        
+        # Check if the event disposition is a "released" status
+        current_disp = event.get_disposition()
+        if not current_disp or current_disp not in self.released_statuses:
+            return None
+        
+        # This is a status release event
+        primary_epc = event.get_primary_epc()
+        location = event.get_location()
+        is_bulk = context.get("is_bulk_operation", False)
+        
+        if primary_epc and location:
+            return Alert(
+                alert_id=f"R3_{event.id}",
+                rule_id=self.rule_id,
+                rule_name=self.rule_name,
+                severity=self.severity,
+                timestamp=event.event_time,
+                epc=primary_epc,
+                location=location,
+                description=f"Status released: {current_disp} in biz_step {event_biz_step}",
+                details={
+                    "disposition": current_disp,
+                    "biz_step": event_biz_step,
+                    "is_bulk_operation": is_bulk,
+                    "action": event.action.value if event.action else None
+                },
+                event_id=event.id
+            )
         return None
 
 
@@ -320,90 +360,137 @@ class Rule6_DamagedSoldAtPOS(MisuseDetector):
         return None
 
 
-class Rule7_ImmediateDamagedAfterProgramming(MisuseDetector):
-    """Rule 7: Items immediately marked damaged after programming."""
-    
-    def __init__(self, time_threshold_minutes: int = 5):
-        super().__init__(7, "Immediate Damaged After Programming", AlertSeverity.LOW)
-        self.time_threshold = timedelta(minutes=time_threshold_minutes)
-        self.programmed_items: Dict[str, datetime] = {}  # epc -> programming time
-        self.recent_alerts: Dict[str, int] = defaultdict(int)  # location -> count
-    
-    def detect(self, event: EPCISEvent, context: Dict[str, Any]) -> Optional[Alert]:
-        # Track commissioning (tag programming)
-        if (event.biz_step == BusinessStep.COMMISSIONING.value and
-            event.action.value == "ADD"):
-            for epc in event.epc_list:
-                self.programmed_items[epc] = event.event_time
-        
-        # Check for immediate damaged assignment
-        if (event.is_inspection() and 
-            event.is_damaged() and
-            event.action.value == "ADD"):
-            for epc in event.epc_list:
-                if epc in self.programmed_items:
-                    time_diff = event.event_time - self.programmed_items[epc]
-                    if time_diff < self.time_threshold:
-                        location = event.get_location()
-                        if location:
-                            self.recent_alerts[location] += 1
-                            
-                            # Only alert if pattern detected (multiple occurrences)
-                            if self.recent_alerts[location] >= 3:
-                                return Alert(
-                                    alert_id=f"R7_{event.id}",
-                                    rule_id=self.rule_id,
-                                    rule_name=self.rule_name,
-                                    severity=self.severity,
-                                    timestamp=event.event_time,
-                                    epc=epc,
-                                    location=location,
-                                    description=f"Item marked damaged {time_diff.total_seconds():.0f}s after programming",
-                                    details={
-                                        "time_since_programming_seconds": time_diff.total_seconds(),
-                                        "pattern_count": self.recent_alerts[location]
-                                    },
-                                    event_id=event.id
-                                )
-        
-        return None
-
-
-class Rule8_DamagedInWrongSublocation(MisuseDetector):
-    """Rule 8: Damaged items in wrong sublocation."""
+class Rule7_DispositionIncorrectInSalesFloor(MisuseDetector):
+    """Rule 7: Detects dispositions that should not be in sales_floor sublocations."""
     
     def __init__(self):
-        super().__init__(8, "Damaged Items in Wrong Sublocation", AlertSeverity.MEDIUM)
-        # These biz_steps indicate sellable areas
-        self.sellable_biz_steps = {
-            BusinessStep.STOCKING.value,  # Moving to sales floor
-            BusinessStep.STORING.value  # In stockroom (but accessible)
+        super().__init__(7, "Incorrect Disposition in Sales Floor", AlertSeverity.MEDIUM)
+        
+        # Dispositions that should NOT be in sales_floor
+        self.incorrect_dispositions_sales_floor = {
+            DispositionURN.SELLABLE_NOT_ACCESSIBLE.value,
+            DispositionURN.RETAIL_SOLD.value,
+            DispositionURN.IN_TRANSIT.value,
+            DispositionURN.NON_SELLABLE_OTHER.value,
+            DispositionURN.DAMAGED.value,
+            "http://nedapretail.com/disp/online_sold",
+            "http://nedapretail.com/disp/in_progress",
+            "http://nedapretail.com/disp/container_closed",
+            "http://nedapretail.com/disp/received_order",
+            "http://nedapretail.com/disp/retail_reserved",
+            "http://nedapretail.com/disp/retail_reserved_for_peak",
+            "http://nedapretail.com/disp/lent",
+            "http://nedapretail.com/disp/faulty",
+            "http://nedapretail.com/disp/missing_article",
+            "http://nedapretail.com/disp/customized",
+            "http://nedapretail.com/disp/hemming"
         }
     
     def detect(self, event: EPCISEvent, context: Dict[str, Any]) -> Optional[Alert]:
-        # Check if damaged item is in sellable area
-        if (event.is_damaged() and
-            event.biz_step in self.sellable_biz_steps):
-            primary_epc = event.get_primary_epc()
-            location = event.get_location()
-            
-            if primary_epc and location:
-                return Alert(
-                    alert_id=f"R8_{event.id}",
-                    rule_id=self.rule_id,
-                    rule_name=self.rule_name,
-                    severity=self.severity,
-                    timestamp=event.event_time,
-                    epc=primary_epc,
-                    location=location,
-                    description=f"Damaged item in sellable area (biz_step: {event.biz_step})",
-                    details={
-                        "biz_step": event.biz_step,
-                        "read_point": event.read_point,
-                        "expected": "Non-sellable area"
-                    },
-                    event_id=event.id
-                )
+        # Check if event has a disposition that's incorrect for sales_floor
+        current_disp = event.get_disposition()
+        if not current_disp or current_disp not in self.incorrect_dispositions_sales_floor:
+            return None
+        
+        # Get location and check if it's a sales_floor sublocation
+        location = event.get_location()
+        if not location:
+            return None
+        
+        location_mapper = context.get("location_mapper")
+        if not location_mapper:
+            return None
+        
+        # Get sublocation type from location_mapper
+        store_info = location_mapper.get_store_info(location)
+        sublocation_type = store_info.get("sublocation_type")
+        
+        # Check if this is a sales_floor sublocation
+        if sublocation_type != "sales_floor":
+            return None
+        
+        # This is an incorrect disposition in sales_floor
+        primary_epc = event.get_primary_epc()
+        if primary_epc:
+            return Alert(
+                alert_id=f"R7_{event.id}",
+                rule_id=self.rule_id,
+                rule_name=self.rule_name,
+                severity=self.severity,
+                timestamp=event.event_time,
+                epc=primary_epc,
+                location=location,
+                description=f"Disposition {current_disp} should not be in sales_floor sublocation",
+                details={
+                    "disposition": current_disp,
+                    "sublocation_type": sublocation_type,
+                    "sublocation_name": store_info.get("sublocation_name"),
+                    "store_name": store_info.get("store_name"),
+                    "biz_step": event.biz_step
+                },
+                event_id=event.id
+            )
+        return None
+
+
+class Rule8_DispositionIncorrectInStockroom(MisuseDetector):
+    """Rule 8: Detects dispositions that should not be in stockroom sublocations."""
+    
+    def __init__(self):
+        super().__init__(8, "Incorrect Disposition in Stockroom", AlertSeverity.MEDIUM)
+        
+        # Dispositions that should NOT be in stockroom
+        self.incorrect_dispositions_stockroom = {
+            DispositionURN.SELLABLE_ACCESSIBLE.value,
+            DispositionURN.RETAIL_SOLD.value,
+            "http://nedapretail.com/disp/on_display",
+            "http://nedapretail.com/disp/in_showcase"
+        }
+    
+    def detect(self, event: EPCISEvent, context: Dict[str, Any]) -> Optional[Alert]:
+        # Check if event has a disposition that's incorrect for stockroom
+        current_disp = event.get_disposition()
+        if not current_disp or current_disp not in self.incorrect_dispositions_stockroom:
+            return None
+        
+        # Get location and check if it's a stockroom sublocation
+        location = event.get_location()
+        if not location:
+            return None
+        
+        location_mapper = context.get("location_mapper")
+        if not location_mapper:
+            return None
+        
+        # Get sublocation type from location_mapper
+        store_info = location_mapper.get_store_info(location)
+        sublocation_type = store_info.get("sublocation_type")
+        
+        # Check if this is a stockroom sublocation
+        if sublocation_type != "stockroom":
+            return None
+        
+        # This is an incorrect disposition in stockroom
+        primary_epc = event.get_primary_epc()
+        if primary_epc:
+            return Alert(
+                alert_id=f"R8_{event.id}",
+                rule_id=self.rule_id,
+                rule_name=self.rule_name,
+                severity=self.severity,
+                timestamp=event.event_time,
+                epc=primary_epc,
+                location=location,
+                description=f"Disposition {current_disp} should not be in stockroom sublocation",
+                details={
+                    "disposition": current_disp,
+                    "sublocation_type": sublocation_type,
+                    "sublocation_name": store_info.get("sublocation_name"),
+                    "store_name": store_info.get("store_name"),
+                    "biz_step": event.biz_step
+                },
+                event_id=event.id
+            )
         return None
 
 
@@ -555,8 +642,8 @@ def get_all_detectors() -> List[MisuseDetector]:
         Rule4_DamagedNotObserved(),
         Rule5_HighVolumeDamaged(),
         Rule6_DamagedSoldAtPOS(),
-        Rule7_ImmediateDamagedAfterProgramming(),
-        Rule8_DamagedInWrongSublocation(),
+        Rule7_DispositionIncorrectInSalesFloor(),
+        Rule8_DispositionIncorrectInStockroom(),
         Rule9_SoldItemsReturnedAsDamaged(),
         Rule10_DamagedWithoutStockMutation(),
         Rule11_DoubleStockDeduction()
