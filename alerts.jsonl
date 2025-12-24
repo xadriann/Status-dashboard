@@ -898,3 +898,3335 @@
   "resolved": false,
   "resolved_at": null
 }
+{
+  "alert_id": "R1_9a3baea2-fd74-43a0-bb23-c82e84895b76",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T12:57:05.885000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037766.10002163",
+  "location": "http://nedapretail.com/loc/store-547908",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a97d7780-d0aa-49f9-be64-e652e2c7a010",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T13:27:31.236000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.029368.10000099",
+  "location": "http://nedapretail.com/loc/sublocation-1046397",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONUK Outlet UK Bicester Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1e3b750e-2781-493a-a2a2-8ba699028cbe",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T14:36:18.931000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039523.10000727",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_85ba7bbe-4a20-47d0-a280-5eaefe351c44",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T15:08:45.756000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027093.10003158",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_856bfcea-7fe9-4c60-ac6f-cd2596d085c6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T15:48:55.250000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.08740.10002050",
+  "location": "http://nedapretail.com/loc/store-553002",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_2818935c-bcc9-4186-a04d-408eccf71d8d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T18:39:51.699000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027324.10004450",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_45e0213a-e2d9-46e1-9f9e-4a8a1b517b4d",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T20:05:36.634000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041842.10014970",
+  "location": "http://nedapretail.com/loc/store-553006",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_9edd34fe-dcaf-49ea-9249-713f0572eebb",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T22:16:58.358000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.010284.10037837",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_af56f76d-6ec5-495e-ac38-bcd2b2369ad4",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-17T14:15:38.409000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.09470.10050240",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_396c2e9a-c91d-4a70-9816-8c203085539e",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-17T18:27:24.330000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.01042.177865710731",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_5d9288dd-4c1e-43b2-be83-e01556744f4a",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-17T19:16:39.455000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.024241.10029538",
+  "location": "http://nedapretail.com/loc/sublocation-1053134",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Houston Rice Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c055b289-2968-4fe8-bc33-442c915091be",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:23:24.619000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033378.10001563",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:receiving"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:18",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:45:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.032172.10004661",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:87",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:45:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033987.10000637",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:16",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:55:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042236.220011406345",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:58",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:35:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033667.220008352191",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:17",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:10:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.022753.220009092146",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:88",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:50:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.020656.10028782",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:89",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:00:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027290.10079837",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a7234995-0382-41b0-8bf1-5dac56272a80:18",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T08:20:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027550.10028675",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_481356ca-be82-4f89-bd08-40446d9be7b4",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T09:39:22.538000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.035486.10000195",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_d55a0d34-0964-439e-920d-24fde2b0352f",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T09:39:35.269000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039979.10003030",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c5ed935b-4bad-4c12-a6f3-5a433f62a89b",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T10:20:48.366000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.021054.10001113",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_6fcb85bc-7781-46cc-b59d-ca0429396f4c",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T10:20:50.465000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.019719.10002330",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_36828a56-c2a6-450a-8049-305cd261b477",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T11:00:59.004000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041122.10000463",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_761927a4-89f6-423c-b000-db5b6f7a2051",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T11:01:29.496000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037784.10000482",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_0380dd3e-5a72-4e9a-a169-2a9616c6ea94",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T11:02:09.294000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.034348.10000986",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_422108b0-bd8e-434d-a161-e1baded48b1d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T12:44:35.655000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041668.10000452",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_0e38df8e-c3b4-4366-8101-9b771be57b29",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T12:45:02.954000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042593.220008380871",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a78482be-31ed-4a3e-9444-506258da1f34",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T12:45:37.059000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.036736.10000229",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e948ab22-6645-42e0-96b9-c8f313426782",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:41:58.236000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.021600.10000104",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_6a3ec7e1-e19a-4a2c-9215-7405a3c91f96",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:43:42.422000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.026768.10001590",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_68b25a1b-e8a1-4b97-9588-560b0aee4ccc",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:43:52.932000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.022730.10003201",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_ba022940-4637-484a-96d0-2ccee9701280",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:45:23.941000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_fe3ad362-1d3c-4bb9-9253-a2bd8ea1f94b",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T14:37:52.051000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.034259.10001040",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_eb506e98-6175-4417-90ad-b8610382f545",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T16:32:42.573000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.019326.10061130",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_caa62cc9-d85d-4f8c-96e0-c59a4100d9c9",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T17:17:00.736000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037555.10000592",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_b808dc2f-cba1-4471-b20f-84ac31cbb229",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T17:47:34.803000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.035006.10001437",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_2d27ccce-86f9-42d7-bc43-ae715aadf6b3",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T17:48:49.874000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.035006.10001437",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_57c127b5-d3cb-49dd-853d-55a2a149a198",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T18:50:14.541000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.00126.199056040215",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_492616bb-d8b9-4010-bf73-820036da9f1a",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T19:13:07.340000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.00126.199056040215",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_4a59e27f-0278-4951-82ee-16d2a7517191",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T19:28:50.758000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.00126.199056040215",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_f55a17f2-deed-4a6b-b029-d65d1ae256f0",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T21:06:34.925000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.057706.10004804",
+  "location": "http://nedapretail.com/loc/store-558959",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_72c05b1a-44b9-4ba8-a92b-0aa7e39dcfcd",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-19T13:23:12.692000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027287.10027116",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_263dff96-24a8-4a1b-9278-170ddf97d1f0",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-19T17:33:53.667000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.026900.10000122",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_6cff1b1b-56d2-41af-a231-a139ba205aca",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-20T19:01:48.396000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039860.10000445",
+  "location": "http://nedapretail.com/loc/sublocation-1053134",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Houston Rice Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_77aa2f28-194e-4f5e-ab20-650d9c134368",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-20T20:10:59.737000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.000220.10022421",
+  "location": "http://nedapretail.com/loc/store-558975",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_df49d295-179c-4e00-b9f5-b1d7da625d56",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T01:10:08.488000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.036590.10002659",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8ffe857b-56aa-43b3-b6ac-16b54aaa68f0:16",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T08:15:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.026768.10001590",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8ffe857b-56aa-43b3-b6ac-16b54aaa68f0:17",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T08:30:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_18de4754-73e5-4fd7-8cc2-de4dd617d766",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:02:26.038000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.028499.10002730",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_2b5bf4b8-6519-4d47-8b55-e810f2e37737",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:02:35.696000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.028498.10002960",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8a00756a-d278-4ccf-9f93-4b970d318a22:22",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:30:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039793.10000043",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8a00756a-d278-4ccf-9f93-4b970d318a22:7",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:25:00+00:00",
+  "epc": "urn:epc:id:sgtin:763086789.0636.220002714515",
+  "location": "http://nedapretail.com/loc/sublocation-1046198",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - GF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_b2a18aa0-c076-4127-aa4c-7f6789b429f9",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T11:22:01.614000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.010074.10000732",
+  "location": "http://nedapretail.com/loc/sublocation-1046397",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONUK Outlet UK Bicester Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1548af2d-7323-4040-86f1-49f6d30eb142",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-21T11:33:06.679000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.003530.10000216",
+  "location": "http://nedapretail.com/loc/store-553072",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e033b9e9-ae04-4a28-a19a-7a02e175b908",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T16:16:30.306000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041810.10006229",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_23d56ca2-8961-4855-a7a8-0328094604f6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-21T16:24:05.521000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.028499.10002730",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_78666426-656f-4492-9585-5a988bcab562",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T17:15:27.786000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.029948.10000199",
+  "location": "http://nedapretail.com/loc/sublocation-1038797",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House",
+    "store_name": "ONUS NYC Lafayette",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_9ab2f6e9-13e8-4641-a062-416cfe276091",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T19:34:10.082000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.019976.10003719",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_ae6ac5ba-a52c-423c-a4b7-35b6880fd49d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T22:40:36.547000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.043796.10001137",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_7bef8630-4447-477b-bad8-96d41a57d2a5",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T23:02:52.283000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027309.10041803",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:10",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:25:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037729.10001089",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:9",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:15:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.044591.10000088",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:36",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:10:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042236.220011406345",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:65",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:35:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039624.10001174",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:39",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:40:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033987.10000637",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:38",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:25:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042474.10014262",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:11",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:35:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.020582.10006590",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:37",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:20:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.020656.10028782",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:64",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:20:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.043778.10000604",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_650cd530-0bf5-47e9-9924-1994d9e08f08:22",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T13:45:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.021613.10004393",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_650cd530-0bf5-47e9-9924-1994d9e08f08:21",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T13:40:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041810.10006229",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_43253fad-5c60-4321-8c64-b45b6643ea33",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T14:20:52.640000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/store-558582",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T14:20:53.961000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:other"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e1251684-72af-400c-b034-ccc2da762422",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T14:50:04.117000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027361.10013150",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_3bfb325f-9f58-4d11-9c68-df5ead0cc877",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T14:50:27.834000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.000213.10074457",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_a38d95ff-7612-40d5-b5e9-286ce2b7a017",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T14:51:34.247000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/store-558582",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_22b22c38-acf0-44f7-af66-27a4c53fc5c3:16",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T15:50:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027309.10041803",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_4becc0ab-5fff-4951-ab78-6c0fe1199785",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T18:30:55.822000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.022231.10032861",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_79111c94-307c-4ff5-a4ec-4dfb71dcd360",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T20:13:29.155000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.034138.10003892",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_d921a5b9-16a3-48c6-8541-96d18bb713fd",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T20:13:39.712000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.025188.10018342",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_5266c87a-05b1-4389-9734-c7ae35c7b519",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T21:37:51.775000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027357.10000756",
+  "location": "http://nedapretail.com/loc/store-559052",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_4e394b19-6095-4569-a833-31d8407d85aa",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T21:48:27.243000+00:00",
+  "epc": "urn:epc:id:sgtin:76155374.00577.231930014375",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e8e9f6ad-7314-456a-9c44-918f149050b2",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T00:00:33.644000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.09473.10039798",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_f07f8a36-3238-4a88-aefa-e364c0d8e38a",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T06:31:27.262000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.025715.10000289",
+  "location": "http://nedapretail.com/loc/sublocation-1046392",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONIT Milan Vittorio Emanuele",
+    "biz_step": "urn:epcglobal:cbv:bizstep:receiving"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_9a3baea2-fd74-43a0-bb23-c82e84895b76",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T12:57:05.885000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037766.10002163",
+  "location": "http://nedapretail.com/loc/store-547908",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a97d7780-d0aa-49f9-be64-e652e2c7a010",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T13:27:31.236000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.029368.10000099",
+  "location": "http://nedapretail.com/loc/sublocation-1046397",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONUK Outlet UK Bicester Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1e3b750e-2781-493a-a2a2-8ba699028cbe",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T14:36:18.931000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039523.10000727",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_85ba7bbe-4a20-47d0-a280-5eaefe351c44",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T15:08:45.756000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027093.10003158",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_856bfcea-7fe9-4c60-ac6f-cd2596d085c6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T15:48:55.250000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.08740.10002050",
+  "location": "http://nedapretail.com/loc/store-553002",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_2818935c-bcc9-4186-a04d-408eccf71d8d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T18:39:51.699000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027324.10004450",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_45e0213a-e2d9-46e1-9f9e-4a8a1b517b4d",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T20:05:36.634000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041842.10014970",
+  "location": "http://nedapretail.com/loc/store-553006",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_9edd34fe-dcaf-49ea-9249-713f0572eebb",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T22:16:58.358000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.010284.10037837",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_af56f76d-6ec5-495e-ac38-bcd2b2369ad4",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-17T14:15:38.409000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.09470.10050240",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_396c2e9a-c91d-4a70-9816-8c203085539e",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-17T18:27:24.330000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.01042.177865710731",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_5d9288dd-4c1e-43b2-be83-e01556744f4a",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-17T19:16:39.455000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.024241.10029538",
+  "location": "http://nedapretail.com/loc/sublocation-1053134",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Houston Rice Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c055b289-2968-4fe8-bc33-442c915091be",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:23:24.619000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033378.10001563",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:receiving"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:18",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:45:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.032172.10004661",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:87",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:45:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033987.10000637",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:16",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:55:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042236.220011406345",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:58",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:35:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033667.220008352191",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:17",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:10:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.022753.220009092146",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:88",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T06:50:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.020656.10028782",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c846268c-e804-4c15-abd7-8bd02be20f41:89",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T07:00:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027290.10079837",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a7234995-0382-41b0-8bf1-5dac56272a80:18",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T08:20:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027550.10028675",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_481356ca-be82-4f89-bd08-40446d9be7b4",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T09:39:22.538000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.035486.10000195",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_d55a0d34-0964-439e-920d-24fde2b0352f",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T09:39:35.269000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039979.10003030",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_c5ed935b-4bad-4c12-a6f3-5a433f62a89b",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T10:20:48.366000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.021054.10001113",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_6fcb85bc-7781-46cc-b59d-ca0429396f4c",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T10:20:50.465000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.019719.10002330",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_36828a56-c2a6-450a-8049-305cd261b477",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T11:00:59.004000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041122.10000463",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_761927a4-89f6-423c-b000-db5b6f7a2051",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T11:01:29.496000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037784.10000482",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_0380dd3e-5a72-4e9a-a169-2a9616c6ea94",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T11:02:09.294000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.034348.10000986",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_422108b0-bd8e-434d-a161-e1baded48b1d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T12:44:35.655000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041668.10000452",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_0e38df8e-c3b4-4366-8101-9b771be57b29",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T12:45:02.954000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042593.220008380871",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a78482be-31ed-4a3e-9444-506258da1f34",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T12:45:37.059000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.036736.10000229",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e948ab22-6645-42e0-96b9-c8f313426782",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:41:58.236000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.021600.10000104",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_6a3ec7e1-e19a-4a2c-9215-7405a3c91f96",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:43:42.422000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.026768.10001590",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_68b25a1b-e8a1-4b97-9588-560b0aee4ccc",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:43:52.932000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.022730.10003201",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_ba022940-4637-484a-96d0-2ccee9701280",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T13:45:23.941000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_fe3ad362-1d3c-4bb9-9253-a2bd8ea1f94b",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T14:37:52.051000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.034259.10001040",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_eb506e98-6175-4417-90ad-b8610382f545",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T16:32:42.573000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.019326.10061130",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_caa62cc9-d85d-4f8c-96e0-c59a4100d9c9",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-18T17:17:00.736000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037555.10000592",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_b808dc2f-cba1-4471-b20f-84ac31cbb229",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T17:47:34.803000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.035006.10001437",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_2d27ccce-86f9-42d7-bc43-ae715aadf6b3",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T17:48:49.874000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.035006.10001437",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_57c127b5-d3cb-49dd-853d-55a2a149a198",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T18:50:14.541000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.00126.199056040215",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_492616bb-d8b9-4010-bf73-820036da9f1a",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T19:13:07.340000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.00126.199056040215",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_4a59e27f-0278-4951-82ee-16d2a7517191",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T19:28:50.758000+00:00",
+  "epc": "urn:epc:id:sgtin:76155372.00126.199056040215",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_f55a17f2-deed-4a6b-b029-d65d1ae256f0",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-18T21:06:34.925000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.057706.10004804",
+  "location": "http://nedapretail.com/loc/store-558959",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_72c05b1a-44b9-4ba8-a92b-0aa7e39dcfcd",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-19T13:23:12.692000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027287.10027116",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_263dff96-24a8-4a1b-9278-170ddf97d1f0",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-19T17:33:53.667000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.026900.10000122",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_6cff1b1b-56d2-41af-a231-a139ba205aca",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-20T19:01:48.396000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039860.10000445",
+  "location": "http://nedapretail.com/loc/sublocation-1053134",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Houston Rice Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_77aa2f28-194e-4f5e-ab20-650d9c134368",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-20T20:10:59.737000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.000220.10022421",
+  "location": "http://nedapretail.com/loc/store-558975",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_df49d295-179c-4e00-b9f5-b1d7da625d56",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T01:10:08.488000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.036590.10002659",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8ffe857b-56aa-43b3-b6ac-16b54aaa68f0:16",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T08:15:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.026768.10001590",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8ffe857b-56aa-43b3-b6ac-16b54aaa68f0:17",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T08:30:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_18de4754-73e5-4fd7-8cc2-de4dd617d766",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:02:26.038000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.028499.10002730",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_2b5bf4b8-6519-4d47-8b55-e810f2e37737",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:02:35.696000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.028498.10002960",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8a00756a-d278-4ccf-9f93-4b970d318a22:22",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:30:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039793.10000043",
+  "location": "http://nedapretail.com/loc/sublocation-1032760",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - FF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_8a00756a-d278-4ccf-9f93-4b970d318a22:7",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T09:25:00+00:00",
+  "epc": "urn:epc:id:sgtin:763086789.0636.220002714515",
+  "location": "http://nedapretail.com/loc/sublocation-1046198",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House - GF",
+    "store_name": "ONUK London Regent Street",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_b2a18aa0-c076-4127-aa4c-7f6789b429f9",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T11:22:01.614000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.010074.10000732",
+  "location": "http://nedapretail.com/loc/sublocation-1046397",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONUK Outlet UK Bicester Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1548af2d-7323-4040-86f1-49f6d30eb142",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-21T11:33:06.679000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.003530.10000216",
+  "location": "http://nedapretail.com/loc/store-553072",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e033b9e9-ae04-4a28-a19a-7a02e175b908",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T16:16:30.306000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041810.10006229",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_23d56ca2-8961-4855-a7a8-0328094604f6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-21T16:24:05.521000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.028499.10002730",
+  "location": "http://nedapretail.com/loc/store-542951",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_78666426-656f-4492-9585-5a988bcab562",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T17:15:27.786000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.029948.10000199",
+  "location": "http://nedapretail.com/loc/sublocation-1038797",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of House",
+    "store_name": "ONUS NYC Lafayette",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_9ab2f6e9-13e8-4641-a062-416cfe276091",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T19:34:10.082000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.019976.10003719",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_ae6ac5ba-a52c-423c-a4b7-35b6880fd49d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T22:40:36.547000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.043796.10001137",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_7bef8630-4447-477b-bad8-96d41a57d2a5",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-21T23:02:52.283000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027309.10041803",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:10",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:25:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037729.10001089",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:9",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:15:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.044591.10000088",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:36",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:10:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042236.220011406345",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:65",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:35:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039624.10001174",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:39",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:40:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033987.10000637",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:38",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:25:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.042474.10014262",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:11",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:35:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.020582.10006590",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:37",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:20:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.020656.10028782",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_cd08a864-dde7-4192-b770-6c1337e8818c:64",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T08:20:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.043778.10000604",
+  "location": "http://nedapretail.com/loc/sublocation-1046388",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONFR Paris Champs-\u00c9lys\u00e9es",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_650cd530-0bf5-47e9-9924-1994d9e08f08:22",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T13:45:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.021613.10004393",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_650cd530-0bf5-47e9-9924-1994d9e08f08:21",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T13:40:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041810.10006229",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_43253fad-5c60-4321-8c64-b45b6643ea33",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T14:20:52.640000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/store-558582",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T14:20:53.961000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:other"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e1251684-72af-400c-b034-ccc2da762422",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T14:50:04.117000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027361.10013150",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_3bfb325f-9f58-4d11-9c68-df5ead0cc877",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T14:50:27.834000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.000213.10074457",
+  "location": "http://nedapretail.com/loc/sublocation-1052568",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - FF",
+    "store_name": "ONES Madrid Calle De Serrano",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_a38d95ff-7612-40d5-b5e9-286ce2b7a017",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T14:51:34.247000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.033442.10010876",
+  "location": "http://nedapretail.com/loc/store-558582",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_22b22c38-acf0-44f7-af66-27a4c53fc5c3:16",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T15:50:00+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027309.10041803",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:cycle_counting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_4becc0ab-5fff-4951-ab78-6c0fe1199785",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T18:30:55.822000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.022231.10032861",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_79111c94-307c-4ff5-a4ec-4dfb71dcd360",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T20:13:29.155000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.034138.10003892",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_d921a5b9-16a3-48c6-8541-96d18bb713fd",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-22T20:13:39.712000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.025188.10018342",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_5266c87a-05b1-4389-9734-c7ae35c7b519",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T21:37:51.775000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027357.10000756",
+  "location": "http://nedapretail.com/loc/store-559052",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_4e394b19-6095-4569-a833-31d8407d85aa",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-22T21:48:27.243000+00:00",
+  "epc": "urn:epc:id:sgtin:76155374.00577.231930014375",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_e8e9f6ad-7314-456a-9c44-918f149050b2",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T00:00:33.644000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.09473.10039798",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_f07f8a36-3238-4a88-aefa-e364c0d8e38a",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T06:31:27.262000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.025715.10000289",
+  "location": "http://nedapretail.com/loc/sublocation-1046392",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONIT Milan Vittorio Emanuele",
+    "biz_step": "urn:epcglobal:cbv:bizstep:receiving"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_9a3baea2-fd74-43a0-bb23-c82e84895b76",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T12:57:05.885000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037766.10002163",
+  "location": "http://nedapretail.com/loc/store-547908",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a97d7780-d0aa-49f9-be64-e652e2c7a010",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T13:27:31.236000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.029368.10000099",
+  "location": "http://nedapretail.com/loc/sublocation-1046397",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONUK Outlet UK Bicester Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1e3b750e-2781-493a-a2a2-8ba699028cbe",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T14:36:18.931000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039523.10000727",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_85ba7bbe-4a20-47d0-a280-5eaefe351c44",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T15:08:45.756000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027093.10003158",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_856bfcea-7fe9-4c60-ac6f-cd2596d085c6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T15:48:55.250000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.08740.10002050",
+  "location": "http://nedapretail.com/loc/store-553002",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_2818935c-bcc9-4186-a04d-408eccf71d8d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T18:39:51.699000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027324.10004450",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_45e0213a-e2d9-46e1-9f9e-4a8a1b517b4d",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T20:05:36.634000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041842.10014970",
+  "location": "http://nedapretail.com/loc/store-553006",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_9edd34fe-dcaf-49ea-9249-713f0572eebb",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T22:16:58.358000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.010284.10037837",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
