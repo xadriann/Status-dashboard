@@ -542,3 +542,359 @@
   "resolved": false,
   "resolved_at": null
 }
+{
+  "alert_id": "R1_9a3baea2-fd74-43a0-bb23-c82e84895b76",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T12:57:05.885000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037766.10002163",
+  "location": "http://nedapretail.com/loc/store-547908",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1e3b750e-2781-493a-a2a2-8ba699028cbe",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T14:36:18.931000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039523.10000727",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_856bfcea-7fe9-4c60-ac6f-cd2596d085c6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T15:48:55.250000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.08740.10002050",
+  "location": "http://nedapretail.com/loc/store-553002",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_45e0213a-e2d9-46e1-9f9e-4a8a1b517b4d",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T20:05:36.634000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041842.10014970",
+  "location": "http://nedapretail.com/loc/store-553006",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_9a3baea2-fd74-43a0-bb23-c82e84895b76",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T12:57:05.885000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037766.10002163",
+  "location": "http://nedapretail.com/loc/store-547908",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a97d7780-d0aa-49f9-be64-e652e2c7a010",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T13:27:31.236000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.029368.10000099",
+  "location": "http://nedapretail.com/loc/sublocation-1046397",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONUK Outlet UK Bicester Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1e3b750e-2781-493a-a2a2-8ba699028cbe",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T14:36:18.931000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039523.10000727",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_85ba7bbe-4a20-47d0-a280-5eaefe351c44",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T15:08:45.756000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027093.10003158",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_856bfcea-7fe9-4c60-ac6f-cd2596d085c6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T15:48:55.250000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.08740.10002050",
+  "location": "http://nedapretail.com/loc/store-553002",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_2818935c-bcc9-4186-a04d-408eccf71d8d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T18:39:51.699000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027324.10004450",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_45e0213a-e2d9-46e1-9f9e-4a8a1b517b4d",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T20:05:36.634000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041842.10014970",
+  "location": "http://nedapretail.com/loc/store-553006",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_9edd34fe-dcaf-49ea-9249-713f0572eebb",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T22:16:58.358000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.010284.10037837",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_9a3baea2-fd74-43a0-bb23-c82e84895b76",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T12:57:05.885000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.037766.10002163",
+  "location": "http://nedapretail.com/loc/store-547908",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_a97d7780-d0aa-49f9-be64-e652e2c7a010",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T13:27:31.236000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.029368.10000099",
+  "location": "http://nedapretail.com/loc/sublocation-1046397",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house - GF",
+    "store_name": "ONUK Outlet UK Bicester Village",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_1e3b750e-2781-493a-a2a2-8ba699028cbe",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T14:36:18.931000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.039523.10000727",
+  "location": "http://nedapretail.com/loc/store-553000",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_85ba7bbe-4a20-47d0-a280-5eaefe351c44",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T15:08:45.756000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027093.10003158",
+  "location": "http://nedapretail.com/loc/sublocation-1046238",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS NYC Flatiron",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_856bfcea-7fe9-4c60-ac6f-cd2596d085c6",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T15:48:55.250000+00:00",
+  "epc": "urn:epc:id:sgtin:76308678.08740.10002050",
+  "location": "http://nedapretail.com/loc/store-553002",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_2818935c-bcc9-4186-a04d-408eccf71d8d",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T18:39:51.699000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.027324.10004450",
+  "location": "http://nedapretail.com/loc/sublocation-1053118",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "GF FOH",
+    "store_name": "ONUS DC Georgetown",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R1_45e0213a-e2d9-46e1-9f9e-4a8a1b517b4d",
+  "rule_id": 1,
+  "rule_name": "Damaged Items in Regular Shipments",
+  "severity": "High",
+  "timestamp": "2025-12-23T20:05:36.634000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.041842.10014970",
+  "location": "http://nedapretail.com/loc/store-553006",
+  "description": "Damaged item added to regular shipment",
+  "details": {
+    "biz_step": "urn:epcglobal:cbv:bizstep:shipping",
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "expected": "Return shipment for damaged items"
+  },
+  "resolved": false,
+  "resolved_at": null
+}
+{
+  "alert_id": "R7_9edd34fe-dcaf-49ea-9249-713f0572eebb",
+  "rule_id": 7,
+  "rule_name": "Incorrect Disposition in Sales Floor",
+  "severity": "Medium",
+  "timestamp": "2025-12-23T22:16:58.358000+00:00",
+  "epc": "urn:epc:id:sgtin:7615537.010284.10037837",
+  "location": "http://nedapretail.com/loc/sublocation-1046249",
+  "description": "Disposition urn:epcglobal:cbv:disp:damaged should not be in sales_floor sublocation",
+  "details": {
+    "disposition": "urn:epcglobal:cbv:disp:damaged",
+    "sublocation_type": "sales_floor",
+    "sublocation_name": "Front of house",
+    "store_name": "ONUS Newport Beach Fashion Island",
+    "biz_step": "urn:epcglobal:cbv:bizstep:inspecting"
+  },
+  "resolved": false,
+  "resolved_at": null
+}

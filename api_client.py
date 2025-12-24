@@ -515,4 +515,82 @@ class IDCloudAPIClient:
                 print(f"Error parsing event {event_dict.get('id', 'unknown')}: {e}")
         
         return parsed_events
+    
+    def fetch_inspection_events_with_non_damaged_dispositions(
+        self,
+        from_time: Optional[datetime] = None,
+        to_time: Optional[datetime] = None,
+        location: Optional[str] = None,
+        max_events: Optional[int] = None
+    ) -> List[EPCISEvent]:
+        """
+        Fetch inspection events (biz_step=inspecting) with non-damaged dispositions.
+        Specifically for Rule3: events where items were inspected and assigned
+        sellable_accessible, sellable_not_accessible, or active (but NOT damaged).
+        
+        This optimizes Rule3 detection by fetching only relevant events instead of
+        all events and filtering client-side.
+        
+        Args:
+            from_time: Start time for event filtering
+            to_time: End time for event filtering
+            location: Business location URN to filter by
+            max_events: Maximum number of events to fetch
+        
+        Returns:
+            List of parsed EPCISEvent objects
+        """
+        from models import DispositionURN
+        
+        # Define the dispositions we're looking for (non-damaged, but from inspections)
+        target_dispositions = [
+            DispositionURN.SELLABLE_ACCESSIBLE.value,
+            DispositionURN.SELLABLE_NOT_ACCESSIBLE.value,
+            DispositionURN.ACTIVE.value
+        ]
+        
+        parameters = [
+            {
+                "name": "EQ_bizStep",
+                "values": ["urn:epcglobal:cbv:bizstep:inspecting"]
+            },
+            {
+                "name": "EQ_disposition",
+                "values": target_dispositions  # Multiple values = OR condition
+            }
+        ]
+        
+        if from_time:
+            parameters.append({
+                "name": "GE_eventTime",
+                "value": from_time.isoformat()
+            })
+        
+        if to_time:
+            parameters.append({
+                "name": "LT_eventTime",
+                "value": to_time.isoformat()
+            })
+        
+        if location:
+            parameters.append({
+                "name": "EQ_bizLocation",
+                "values": [location] if isinstance(location, str) else location
+            })
+        
+        event_dicts = self.fetch_all_events(
+            parameters=parameters,
+            max_events=max_events
+        )
+        
+        # Parse events
+        parsed_events = []
+        for event_dict in event_dicts:
+            try:
+                event = EPCISEventParser.parse_from_dict(event_dict)
+                parsed_events.append(event)
+            except Exception as e:
+                print(f"Error parsing event {event_dict.get('id', 'unknown')}: {e}")
+        
+        return parsed_events
 

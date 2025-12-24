@@ -1,21 +1,21 @@
 {
-  "generated_at": "2025-12-22T10:02:53.449906",
+  "generated_at": "2025-12-24T11:23:19.223468",
   "stores": [
     {
       "location": "http://nedapretail.com/loc/store-547908",
-      "total_epcs_affected": 387,
+      "total_epcs_affected": 396,
       "total_epcs_last_week": 9,
-      "events_count": 111,
+      "events_count": 114,
       "events_last_week": 3,
       "first_occurrence": "2025-03-08T16:09:32.312000+00:00",
-      "last_occurrence": "2025-12-15T17:24:58.690000+00:00"
+      "last_occurrence": "2025-12-23T12:57:06.018000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-553392",
       "total_epcs_affected": 678,
-      "total_epcs_last_week": 13,
+      "total_epcs_last_week": 0,
       "events_count": 145,
-      "events_last_week": 3,
+      "events_last_week": 0,
       "first_occurrence": "2025-04-23T11:23:24.881000+00:00",
       "last_occurrence": "2025-12-16T14:08:42.939000+00:00"
     },
@@ -31,18 +31,18 @@
     {
       "location": "http://nedapretail.com/loc/store-542951",
       "total_epcs_affected": 1714,
-      "total_epcs_last_week": 89,
+      "total_epcs_last_week": 84,
       "events_count": 364,
-      "events_last_week": 28,
+      "events_last_week": 22,
       "first_occurrence": "2025-05-21T14:38:09.997000+00:00",
       "last_occurrence": "2025-12-21T16:24:05.639000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-556092",
       "total_epcs_affected": 105,
-      "total_epcs_last_week": 20,
+      "total_epcs_last_week": 0,
       "events_count": 20,
-      "events_last_week": 6,
+      "events_last_week": 0,
       "first_occurrence": "2025-10-29T12:35:46.294000+00:00",
       "last_occurrence": "2025-12-15T10:34:23.825000+00:00"
     },
@@ -58,9 +58,9 @@
     {
       "location": "http://nedapretail.com/loc/store-553070",
       "total_epcs_affected": 203,
-      "total_epcs_last_week": 24,
+      "total_epcs_last_week": 0,
       "events_count": 55,
-      "events_last_week": 3,
+      "events_last_week": 0,
       "first_occurrence": "2025-11-08T12:50:19.911000+00:00",
       "last_occurrence": "2025-12-17T10:57:10.366000+00:00"
     },
@@ -103,20 +103,20 @@
     {
       "location": "http://nedapretail.com/loc/store-558975",
       "total_epcs_affected": 48,
-      "total_epcs_last_week": 10,
+      "total_epcs_last_week": 7,
       "events_count": 27,
-      "events_last_week": 6,
+      "events_last_week": 3,
       "first_occurrence": "2025-11-20T18:48:48.336000+00:00",
       "last_occurrence": "2025-12-20T20:10:59.951000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-553002",
-      "total_epcs_affected": 120,
-      "total_epcs_last_week": 0,
-      "events_count": 36,
-      "events_last_week": 0,
+      "total_epcs_affected": 145,
+      "total_epcs_last_week": 25,
+      "events_count": 39,
+      "events_last_week": 3,
       "first_occurrence": "2025-11-21T20:50:45.039000+00:00",
-      "last_occurrence": "2025-12-15T00:38:57.503000+00:00"
+      "last_occurrence": "2025-12-23T15:48:55.420000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-553004",
@@ -138,12 +138,12 @@
     },
     {
       "location": "http://nedapretail.com/loc/store-559052",
-      "total_epcs_affected": 49,
-      "total_epcs_last_week": 9,
-      "events_count": 33,
+      "total_epcs_affected": 59,
+      "total_epcs_last_week": 10,
+      "events_count": 36,
       "events_last_week": 3,
       "first_occurrence": "2025-11-24T22:21:10.959000+00:00",
-      "last_occurrence": "2025-12-16T16:41:30.949000+00:00"
+      "last_occurrence": "2025-12-22T21:37:52.015000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-552999",
@@ -165,30 +165,30 @@
     },
     {
       "location": "http://nedapretail.com/loc/store-545734",
-      "total_epcs_affected": 39,
-      "total_epcs_last_week": 11,
-      "events_count": 38,
-      "events_last_week": 11,
+      "total_epcs_affected": 40,
+      "total_epcs_last_week": 4,
+      "events_count": 39,
+      "events_last_week": 4,
       "first_occurrence": "2025-11-26T22:57:44.017000+00:00",
-      "last_occurrence": "2025-12-22T07:53:09.219000+00:00"
+      "last_occurrence": "2025-12-23T17:14:11.781000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-558959",
       "total_epcs_affected": 73,
-      "total_epcs_last_week": 8,
+      "total_epcs_last_week": 3,
       "events_count": 27,
-      "events_last_week": 9,
+      "events_last_week": 3,
       "first_occurrence": "2025-11-29T18:36:45.885000+00:00",
       "last_occurrence": "2025-12-18T21:06:35.092000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-553006",
-      "total_epcs_affected": 7,
-      "total_epcs_last_week": 0,
-      "events_count": 3,
-      "events_last_week": 0,
+      "total_epcs_affected": 25,
+      "total_epcs_last_week": 18,
+      "events_count": 6,
+      "events_last_week": 3,
       "first_occurrence": "2025-11-29T20:46:27.388000+00:00",
-      "last_occurrence": "2025-11-29T20:46:27.618000+00:00"
+      "last_occurrence": "2025-12-23T20:05:36.862000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-547559",
@@ -201,30 +201,30 @@
     },
     {
       "location": "http://nedapretail.com/loc/store-558582",
-      "total_epcs_affected": 21,
-      "total_epcs_last_week": 0,
-      "events_count": 12,
-      "events_last_week": 0,
+      "total_epcs_affected": 28,
+      "total_epcs_last_week": 7,
+      "events_count": 18,
+      "events_last_week": 6,
       "first_occurrence": "2025-12-03T08:15:53.796000+00:00",
-      "last_occurrence": "2025-12-13T09:55:09.203000+00:00"
+      "last_occurrence": "2025-12-22T14:51:34.347000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-553007",
       "total_epcs_affected": 78,
-      "total_epcs_last_week": 12,
+      "total_epcs_last_week": 0,
       "events_count": 25,
-      "events_last_week": 4,
+      "events_last_week": 0,
       "first_occurrence": "2025-12-05T00:01:35.722000+00:00",
       "last_occurrence": "2025-12-15T20:57:00.349000+00:00"
     },
     {
       "location": "http://nedapretail.com/loc/store-553000",
-      "total_epcs_affected": 80,
-      "total_epcs_last_week": 80,
-      "events_count": 18,
-      "events_last_week": 6,
+      "total_epcs_affected": 94,
+      "total_epcs_last_week": 94,
+      "events_count": 24,
+      "events_last_week": 9,
       "first_occurrence": "2025-12-09T20:10:01.846000+00:00",
-      "last_occurrence": "2025-12-17T18:27:24.563000+00:00"
+      "last_occurrence": "2025-12-23T14:36:19.159000+00:00"
     },
     {
       "location": "http://nedap-harmony.com/loc/b2b-handheld-reader-2",
@@ -243,11 +243,20 @@
       "events_last_week": 0,
       "first_occurrence": "2025-12-15T01:08:46.634000+00:00",
       "last_occurrence": "2025-12-15T01:08:46.634000+00:00"
+    },
+    {
+      "location": "http://nedap-harmony.com/loc/embrach-on-ap1",
+      "total_epcs_affected": 1,
+      "total_epcs_last_week": 1,
+      "events_count": 1,
+      "events_last_week": 1,
+      "first_occurrence": "2025-12-23T09:58:12.560000+00:00",
+      "last_occurrence": "2025-12-23T09:58:12.560000+00:00"
     }
   ],
   "summary": {
-    "total_stores": 27,
-    "total_epcs_all_time": 3954,
-    "total_epcs_last_week": 295
+    "total_stores": 28,
+    "total_epcs_all_time": 4039,
+    "total_epcs_last_week": 272
   }
 }
