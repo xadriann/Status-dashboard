@@ -91,7 +91,7 @@ class Dashboard:
         """Get performance metrics for each detection rule."""
         rule_stats = {}
         
-        for rule_id in range(1, 12):
+        for rule_id in range(1, 13):
             rule_alerts = self.processor.get_alerts_by_rule(rule_id)
             unresolved = [a for a in rule_alerts if not a.resolved]
             
@@ -241,19 +241,27 @@ class Dashboard:
         """Get location rankings as a Pandas DataFrame, grouped by store location."""
         import pandas as pd
         rankings = self.get_location_rankings()
+        
+        # Handle empty rankings
+        if not rankings:
+            # Return empty DataFrame with expected columns
+            return pd.DataFrame(columns=['location', 'store_name', 'total_alerts', 'critical_alerts', 
+                                       'high_alerts', 'medium_alerts', 'low_alerts'])
+        
         df = pd.DataFrame(rankings)
         
         # Remove display_name and sublocation_name columns if they exist
         columns_to_remove = ['display_name', 'sublocation_name']
         df = df.drop(columns=[col for col in columns_to_remove if col in df.columns])
         
-        # Reorder columns: location, store_name, then metrics
-        base_cols = ['location']
-        if 'store_name' in df.columns:
-            base_cols.append('store_name')
-        metric_cols = [c for c in df.columns if c not in base_cols]
-        cols = base_cols + metric_cols
-        df = df[cols]
+        # Reorder columns: location, store_name, then metrics (only if location column exists)
+        if 'location' in df.columns:
+            base_cols = ['location']
+            if 'store_name' in df.columns:
+                base_cols.append('store_name')
+            metric_cols = [c for c in df.columns if c not in base_cols]
+            cols = base_cols + metric_cols
+            df = df[cols]
         
         return df
 

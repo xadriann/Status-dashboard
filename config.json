@@ -42,11 +42,11 @@
   "dashboard_refresh_interval_seconds": 60,
   
   "api_base_url": "https://api.nedapretail.com",
-  "api_token": "d71bf5af0a5ec6ee0770344e5a0fa06a74216a42308ad91a1f82ec",
+  "api_token": "d4a271b3dc1e21a01126bb54f1d66fc5d6ffcfdb8238df2c393ee4",
   "api_timeout": 30,
   "api_delay_between_requests": 0.5,
   
-  "query_hours_back": 24,
+  "query_hours_back": 168,
   "query_max_events": null,
   "query_location": null,
   
@@ -64,7 +64,7 @@
   "shipment_metrics_output_file": "shipment_metrics.json",
   "stock_report_months": 2,
   "stock_report_dispositions": [
-    "urn:epcglobal:cbv:disp:damaged", "http://nedapretail.com/disp/on_display", "http://nedapretail.com/disp/in_showcase"
+    "urn:epcglobal:cbv:disp:damaged", "http://nedapretail.com/disp/received_order", "http://nedapretail.com/disp/online_sold", "http://nedapretail.com/disp/on_display", "http://nedapretail.com/disp/in_showcase", "http://nedapretail.com/disp/lent"
   ],
   "stock_report_biz_steps": null,
   "stock_report_store_limit": null,

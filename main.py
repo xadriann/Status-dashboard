@@ -426,10 +426,15 @@ def main():
                     print(f"✅ Exported {len(alerts_df)} alerts to 'Detected Misuses'")
                 
                 # 2. Location Rankings Sheet
-                rankings_df = make_naive(system.dashboard.get_rankings_dataframe())
-                if not rankings_df.empty:
-                    rankings_df.to_excel(writer, sheet_name="Store Rankings", index=False)
-                    print("✅ Exported store rankings to 'Store Rankings'")
+                try:
+                    rankings_df = make_naive(system.dashboard.get_rankings_dataframe())
+                    if not rankings_df.empty:
+                        rankings_df.to_excel(writer, sheet_name="Store Rankings", index=False)
+                        print("✅ Exported store rankings to 'Store Rankings'")
+                    else:
+                        print("ℹ️ No store rankings to export (no alerts detected).")
+                except Exception as e:
+                    print(f"⚠️ Warning: Could not export store rankings: {e}")
                 
                 # 3. Shipment Metrics Sheet (if calculated)
                 if shipment_metrics_data:

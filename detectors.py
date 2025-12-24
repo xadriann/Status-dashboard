@@ -633,6 +633,44 @@ class Rule11_DoubleStockDeduction(MisuseDetector):
         return None
 
 
+class Rule12_RetailSoldInCycleCounting(MisuseDetector):
+    """Rule 12: Retail sold items detected during cycle counting."""
+    
+    def __init__(self):
+        super().__init__(12, "Retail Sold in Cycle Counting", AlertSeverity.HIGH)
+        self.cycle_counting_biz_step = "urn:epcglobal:cbv:bizstep:cycle_counting"
+        self.retail_sold_disposition = DispositionURN.RETAIL_SOLD.value
+    
+    def detect(self, event: EPCISEvent, context: Dict[str, Any]) -> Optional[Alert]:
+        # Check if event has retail_sold disposition and cycle_counting biz_step
+        current_disp = event.get_disposition()
+        event_biz_step = event.biz_step
+        
+        if (current_disp == self.retail_sold_disposition and 
+            event_biz_step == self.cycle_counting_biz_step):
+            primary_epc = event.get_primary_epc()
+            location = event.get_location()
+            
+            if primary_epc and location:
+                return Alert(
+                    alert_id=f"R12_{event.id}",
+                    rule_id=self.rule_id,
+                    rule_name=self.rule_name,
+                    severity=self.severity,
+                    timestamp=event.event_time,
+                    epc=primary_epc,
+                    location=location,
+                    description="Retail sold item detected during cycle counting",
+                    details={
+                        "disposition": current_disp,
+                        "biz_step": event_biz_step,
+                        "action": event.action.value if event.action else None
+                    },
+                    event_id=event.id
+                )
+        return None
+
+
 def get_all_detectors() -> List[MisuseDetector]:
     """Get all configured misuse detectors."""
     return [
@@ -646,5 +684,6 @@ def get_all_detectors() -> List[MisuseDetector]:
         Rule8_DispositionIncorrectInStockroom(),
         Rule9_SoldItemsReturnedAsDamaged(),
         Rule10_DamagedWithoutStockMutation(),
-        Rule11_DoubleStockDeduction()
+        Rule11_DoubleStockDeduction(),
+        Rule12_RetailSoldInCycleCounting()
     ]
